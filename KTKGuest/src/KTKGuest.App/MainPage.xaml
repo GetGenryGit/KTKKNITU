@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:wc="clr-namespace:KTKGuest.WebComponents;assembly=KTKGuest.WebComponents"
+             x:Class="KTKGuest.App.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    
+    <RefreshView x:Name="RefreshView" RefreshColor="#DD0029" Refreshing="RefreshView_OnRefreshing">
+        <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
+            <BlazorWebView.RootComponents>
+                <RootComponent Selector="#app" ComponentType="{x:Type wc:App}" />
+            </BlazorWebView.RootComponents>
+        </BlazorWebView>
+    </RefreshView>
+
+</ContentPage>

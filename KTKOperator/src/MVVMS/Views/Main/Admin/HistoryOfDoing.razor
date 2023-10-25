@@ -1,0 +1,49 @@
+﻿@page "/history_of_doing"
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize(Roles = "А.П.")]
+
+@inject IHistoryOfDoingVM vm
+
+<h1>Журнал действий</h1>
+
+<div class="main-container" disabled="@vm.IsLoading.ToString()">
+    <table class="fixed_header">
+        <thead>
+            <tr>
+                <th>Событие</th>
+                <th>Дата/Время</th>
+            </tr>
+        </thead>
+        <tbody style="height: 500px;">
+            @if (vm.IsLoading)
+            {
+                <div class="spinner" style="top: 45%; left: 46%;"></div>
+            }
+            else
+            {
+                foreach (var item in vm.HistoryList)
+                {
+                    <tr>
+                        <td>@item.EventDescribe</td>
+                        <td>@item.DateCreated.ToString("dd.MM.yyyy HH:mm")</td>
+                    </tr>
+                }
+            }
+
+
+        </tbody>
+    </table>
+
+    <div class="buttons-container" style="margin: 10px; justify-content: space-between;">
+        <a class="button1" @onclick="vm.UpdateHistoryList" style="min-width: auto; height: auto; background: blue;"><span class="material-symbols-sharp" style="font-size: 32px;">refresh</span></a>
+    </div>
+
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await vm.InitilizedVMAsync();
+    }
+}

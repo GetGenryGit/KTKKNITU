@@ -1,0 +1,50 @@
+﻿@page "/schedule"
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize]
+
+@inject IScheduleVM vm
+@inject NavigationManager navigationService
+
+<div class="date" disabled="@vm.IsLoading.ToString()">
+    <input type="date" @bind="vm.SelectedDate" @bind:after="vm.ClearDataTable">
+</div>
+
+<div class="main-container">
+    <h2>Колво групп в таблице: @vm.ScheduleList.scheduleObjList.ScheduleItems.Count</h2>
+    <table class="fixed_header">
+        <tbody style="height: 470px;">
+            @if (vm.IsLoading)
+            {
+                <div class="spinner" style="position: relative;top: 50%; left: 46.5%;"></div>
+            }
+            else
+            {
+                foreach (var item in vm.ScheduleList.scheduleObjList.ScheduleItems)
+                {
+                    <tr>
+                        <td style="width: 100%;">@item.Title</td>
+                        <td><a @onclick="() => vm.ShowSchedule(item)" style="cursor: pointer;"><span class="material-symbols-sharp">info</span></a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    <div class="buttons-container" disabled="@vm.IsLoading.ToString()">
+        <a class="button1" @onclick="vm.RecieveDataFromExcel" style="background: green;"><span class="material-symbols-sharp">description</span>Загрузить xlsx</a>
+
+        <span class="right-buttons">
+            <a class="button1" @onclick="vm.ClearDataTable" style="background: red;"><span class="material-symbols-sharp">clear</span>Очистить список</a>
+            <a class="button1" @onclick="vm.UploadDataTable" style="background: blue;"><span class="material-symbols-sharp">upload</span>Опубликовать</a>
+        </span>
+    </div>
+</div>
+
+@code{
+    protected override void OnInitialized()
+    {
+        vm.navigationService = navigationService;
+    }
+
+}

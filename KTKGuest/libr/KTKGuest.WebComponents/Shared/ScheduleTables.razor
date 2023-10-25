@@ -1,0 +1,11 @@
+﻿@using KTKGuest.WebComponents.Data
+<div class="schedule-container">
+    @foreach (var item in ScheduleList.ScheduleItems)
+    {
+        <ScheduleItemTable Item="item" />
+    }
+</div>
+
+@code{
+    [Parameter] public ScheduleObj ScheduleList { get; set; }
+}

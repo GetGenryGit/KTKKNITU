@@ -1,0 +1,1 @@
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\KTKGuest.App.csproj;x64

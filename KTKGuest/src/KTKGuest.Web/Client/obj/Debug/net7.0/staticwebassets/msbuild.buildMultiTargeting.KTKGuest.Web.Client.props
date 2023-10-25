@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\KTKGuest.Web.Client.props" />
+</Project>

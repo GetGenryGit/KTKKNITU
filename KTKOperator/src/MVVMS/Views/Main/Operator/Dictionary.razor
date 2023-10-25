@@ -1,0 +1,32 @@
+﻿@page "/dictionary"
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize]
+
+@inject IDictionaryVM vm
+
+
+<h1>Справочники</h1>
+
+<div class="main-container" disabled="@vm.IsLoading.ToString()">
+    <div class="file_picker" style="max-width: 82%;width: 100%;">
+        <span class="material-symbols-sharp">database</span>
+        <input type="text" placeholder="Путь к базе данных Access" @bind="vm.PathFull" />
+        <span class="material-symbols-sharp" style="cursor: pointer" @onclick="vm.SelectPath">attach_file</span>
+        <span class="material-symbols-sharp" style="cursor: pointer" @onclick="vm.ClearPath">clear</span>
+    </div>
+
+    <div class="buttons-container" style="max-width: 82%; width: 100%;">
+        <a class="button button1" style="background: blue; width: 100%;height: auto;display: inline-block;" @onclick="vm.SyncDictionary">
+            Синхронизировать справочники
+        </a>
+    </div>
+
+</div>
+
+@code{
+    protected override async Task OnInitializedAsync()
+    {
+        await vm.InitilizedVMAsync();
+    }
+}

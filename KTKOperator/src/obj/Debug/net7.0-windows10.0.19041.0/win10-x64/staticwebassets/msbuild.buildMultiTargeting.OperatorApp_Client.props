@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\OperatorApp_Client.props" />
+</Project>
