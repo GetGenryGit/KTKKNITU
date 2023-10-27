@@ -30,29 +30,29 @@
     <AppXManifest Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-27T02:02:41.786</Modified>
+      <Modified>2023-10-27T11:04:26.867</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-27T01:13:50.387</Modified>
+      <Modified>2023-10-27T11:03:38.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\OperatorApp_Client.runtimeconfig.json">
       <PackagePath>OperatorApp_Client.runtimeconfig.json</PackagePath>
-      <Modified>2023-10-26T19:23:53.753</Modified>
+      <Modified>2023-10-27T11:03:38.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\OperatorApp_Client.dll">
       <PackagePath>OperatorApp_Client.dll</PackagePath>
-      <Modified>2023-10-27T01:37:09.820</Modified>
+      <Modified>2023-10-27T11:03:37.427</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>OperatorApp_Client.exe</PackagePath>
-      <Modified>2023-10-27T01:37:09.918</Modified>
+      <Modified>2023-10-27T11:03:37.437</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\OperatorApp_Client.deps.json">
       <PackagePath>OperatorApp_Client.deps.json</PackagePath>
-      <Modified>2023-10-26T19:23:53.622</Modified>
+      <Modified>2023-10-27T11:03:38.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.10\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1112,23 +1112,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.177</Modified>
+      <Modified>2023-10-27T02:13:38.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.197</Modified>
+      <Modified>2023-10-27T02:13:38.783</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.222</Modified>
+      <Modified>2023-10-27T02:13:38.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.274</Modified>
+      <Modified>2023-10-27T02:13:38.860</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.497</Modified>
+      <Modified>2023-10-27T02:13:39.043</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -1136,207 +1136,207 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-10-25T19:02:46.534</Modified>
+      <Modified>2023-10-27T02:13:39.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.892</Modified>
+      <Modified>2023-10-27T02:13:39.305</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.904</Modified>
+      <Modified>2023-10-27T02:13:39.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.931</Modified>
+      <Modified>2023-10-27T02:13:39.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.971</Modified>
+      <Modified>2023-10-27T02:13:39.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-10-25T19:02:47.109</Modified>
+      <Modified>2023-10-27T02:13:39.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.623</Modified>
+      <Modified>2023-10-27T02:13:39.113</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.625</Modified>
+      <Modified>2023-10-27T02:13:39.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.640</Modified>
+      <Modified>2023-10-27T02:13:39.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.629</Modified>
+      <Modified>2023-10-27T02:13:39.118</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.632</Modified>
+      <Modified>2023-10-27T02:13:39.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.596</Modified>
+      <Modified>2023-10-27T02:13:39.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.599</Modified>
+      <Modified>2023-10-27T02:13:39.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.620</Modified>
+      <Modified>2023-10-27T02:13:39.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.606</Modified>
+      <Modified>2023-10-27T02:13:39.102</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.611</Modified>
+      <Modified>2023-10-27T02:13:39.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.552</Modified>
+      <Modified>2023-10-27T02:13:39.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.556</Modified>
+      <Modified>2023-10-27T02:13:39.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.560</Modified>
+      <Modified>2023-10-27T02:13:39.079</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.564</Modified>
+      <Modified>2023-10-27T02:13:39.081</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.570</Modified>
+      <Modified>2023-10-27T02:13:39.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.574</Modified>
+      <Modified>2023-10-27T02:13:39.087</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.577</Modified>
+      <Modified>2023-10-27T02:13:39.088</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.594</Modified>
+      <Modified>2023-10-27T02:13:39.098</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.580</Modified>
+      <Modified>2023-10-27T02:13:39.089</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.584</Modified>
+      <Modified>2023-10-27T02:13:39.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.693</Modified>
+      <Modified>2023-10-27T02:13:39.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.701</Modified>
+      <Modified>2023-10-27T02:13:39.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.709</Modified>
+      <Modified>2023-10-27T02:13:39.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.723</Modified>
+      <Modified>2023-10-27T02:13:39.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.765</Modified>
+      <Modified>2023-10-27T02:13:39.215</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.666</Modified>
+      <Modified>2023-10-27T02:13:39.145</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.669</Modified>
+      <Modified>2023-10-27T02:13:39.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.673</Modified>
+      <Modified>2023-10-27T02:13:39.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.679</Modified>
+      <Modified>2023-10-27T02:13:39.155</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.688</Modified>
+      <Modified>2023-10-27T02:13:39.162</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.644</Modified>
+      <Modified>2023-10-27T02:13:39.129</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.647</Modified>
+      <Modified>2023-10-27T02:13:39.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.651</Modified>
+      <Modified>2023-10-27T02:13:39.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.655</Modified>
+      <Modified>2023-10-27T02:13:39.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.662</Modified>
+      <Modified>2023-10-27T02:13:39.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.785</Modified>
+      <Modified>2023-10-27T02:13:39.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.794</Modified>
+      <Modified>2023-10-27T02:13:39.228</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.803</Modified>
+      <Modified>2023-10-27T02:13:39.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.817</Modified>
+      <Modified>2023-10-27T02:13:39.248</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.881</Modified>
+      <Modified>2023-10-27T02:13:39.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.712</Modified>
+      <Modified>2023-10-27T02:13:39.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.726</Modified>
+      <Modified>2023-10-27T02:13:39.201</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.745</Modified>
+      <Modified>2023-10-27T02:13:39.214</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.782</Modified>
+      <Modified>2023-10-27T02:13:39.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-10-25T19:02:46.849</Modified>
+      <Modified>2023-10-27T02:13:39.286</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

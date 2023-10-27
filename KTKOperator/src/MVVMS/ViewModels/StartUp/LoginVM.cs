@@ -93,18 +93,6 @@ public class LoginVM : ILoginVM
         {
             LoadingChange(true);
 
-            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
-            {
-                LoadingChange(false);
-
-                await displayAlertService.DisplayMessage(
-                    "Ошибка",
-                    "Поля Логин или Пароль не должны быть пустыми",
-                    "ОК");
-
-                return;
-            }
-
             APIResponse responseLogin = await LoginUser(login, password);
 
             if (!responseLogin.Result)
