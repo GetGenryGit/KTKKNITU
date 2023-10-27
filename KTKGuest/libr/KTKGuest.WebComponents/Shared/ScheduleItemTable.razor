@@ -1,4 +1,8 @@
 ﻿@using KTKGuest.WebComponents.Data
+@using KTKGuest.WebComponents.Services;
+
+@inject IToastService toastService;
+
 <section>
     @if (Item.Title.Length > 20)
     {
@@ -29,7 +33,7 @@
                             {
                                 if (item.SubGroup == 0)
                                 {
-                                    <div>
+                                    <div @onclick="() => onShowFullInformationAbourLesson(item)">
                                         <span>
                                             @if (@item.Title1.Length > 30)
                                             {
@@ -55,7 +59,7 @@
                                 {
                                     if (item.SubGroup == 1)
                                     {
-                                        <div>
+                                        <div @onclick="() => onShowFullInformationAbourLesson(item)">
                                             <span>
                                                 @if (item.Title1.Length > 13)
                                                 {
@@ -85,7 +89,7 @@
 
                                     if (item.SubGroup == 2)
                                     {
-                                        <div>
+                                        <div @onclick="() => onShowFullInformationAbourLesson(item)">
                                             <span>
                                                 @if (item.Title1.Length > 13)
                                                 {
@@ -123,4 +127,9 @@
 
 @code {
     [Parameter] public ScheduleItemObj Item { get; set; }
+
+    public void onShowFullInformationAbourLesson(ItemObj item)
+        => toastService.ShowInfo($"{item.Title1} | \n"+
+                                 $"{item.Title3} | \n" +
+                                 $"{item.Title2}", "Информация о паре!");
 }

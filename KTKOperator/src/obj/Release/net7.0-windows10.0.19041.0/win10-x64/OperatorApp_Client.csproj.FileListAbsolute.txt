@@ -5,7 +5,6 @@ C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\w
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\win10-x64\OperatorApp_Client.dll
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\win10-x64\OperatorApp_Client.pdb
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\win10-x64\resources.pri
-C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Blazored.SessionStorage.dll
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Authorization.dll
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.dll
@@ -360,4 +359,5 @@ C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Release\net7.0-windows10.0.19041.0\w
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Release\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Release\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Release\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Release\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Release\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
