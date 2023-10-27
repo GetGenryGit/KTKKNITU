@@ -26,8 +26,8 @@
                 foreach (var item in vm.UsersList)
                 {
                     <tr @onclick="() => { vm.CreateOrEdit(item); }" style="cursor: pointer;">
-                        <td>@item.UserDetails.SecondName @item.UserDetails.FirstName @item.UserDetails.MiddleName</td>
-                        <td>@item.UserDetails.Role</td>
+                        <td>@item.Login</td>
+                        <td>@item.Role</td>
                     </tr>
                 }
             }

@@ -1,4 +1,4 @@
-﻿/*using OperatorApp_Client.Constants;
+﻿using OperatorApp_Client.Constants;
 using OperatorApp_Client.Interfaces.Services;
 using OperatorApp_Client.Interfaces.ViewModels.Main.Operator;
 using OperatorApp_Client.MVVMS.Models;
@@ -22,32 +22,32 @@ public class HistoryOfScheduleVM : IHistoryOfScheduleVM
 
     #region [Properties]
     private bool isLoading;
-    public bool IsLoading 
-    { 
-        get => isLoading; 
-        set => isLoading = value; 
+    public bool IsLoading
+    {
+        get => isLoading;
+        set => isLoading = value;
     }
 
-    private List<HistoryItem> historyList = new List<HistoryItem>();    
-    public List<HistoryItem> HistoryList 
+    private List<HistoryItem> historyList = new List<HistoryItem>();
+    public List<HistoryItem> HistoryList
     {
-        get => historyList; 
-        set => historyList = value; 
+        get => historyList;
+        set => historyList = value;
     }
     #endregion
 
     #region [SecondoryMethods]
     private void LoadingChange(bool state)
         => IsLoading = state;
-    *//*private async Task<APIResponse> GetHistoryOperator()
+    private async Task<APIResponse> GetHistoryOperator()
     {
-        var getAllUsersPost = new Dictionary<string, string>
+        /*var getAllUsersPost = new Dictionary<string, string>
         {
                 { "API_KEY", APIConstants.token }
-        };
+        };*/
 
-        return await httpService.POST(APIConstants.GetLogsOperator, getAllUsersPost);
-    }*//*
+        return await httpService.GET(APIConstants.GetLogs + "?role=О.Р.");
+    }
     #endregion
 
     #region [MainMethods]
@@ -79,7 +79,7 @@ public class HistoryOfScheduleVM : IHistoryOfScheduleVM
                 return;
             }
 
-            var historyList = JsonSerializer.Deserialize<List<HistoryItem>>(response.JsonContent);
+            var historyList = JsonSerializer.Deserialize<List<HistoryItem>>(response.Obj.ToString());
             historyList.Reverse();
 
             HistoryList = historyList;
@@ -99,4 +99,3 @@ public class HistoryOfScheduleVM : IHistoryOfScheduleVM
     #endregion
 
 }
-*/

@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using OperatorApp_Client.Constants;
 using OperatorApp_Client.Interfaces.Services;
 using OperatorApp_Client.Interfaces.ViewModels.Main.Admin;
@@ -32,8 +32,8 @@ public class AdminPanelVM : IAdminPanelVM
         set => isLoading = value;
     }
 
-    private List<AdminPanelUserItem> usersList = new List<AdminPanelUserItem>();
-    public List<AdminPanelUserItem> UsersList
+    private List<UserDetails> usersList = new List<UserDetails>();
+    public List<UserDetails> UsersList
     {
         get => usersList;
         set => usersList = value;
@@ -41,55 +41,46 @@ public class AdminPanelVM : IAdminPanelVM
     #endregion
 
     #region [SecondoryMethods]
-    private void LoadingChange(bool state) 
+    private void LoadingChange(bool state)
         => IsLoading = state;
 
-    *//*private async Task<APIResponse> GetAllUsers()
+    private async Task<APIResponse> GetAllUsers()
     {
-        var getAllUsersPost = new Dictionary<string, string>
+        /*var getAllUsersPost = new Dictionary<string, string>
             {
                 { "API_KEY", APIConstants.token }
-            };
+            };*/
 
-        return await httpService.POST(APIConstants.GetAllUsers, getAllUsersPost);
-    }*//*
+        return await httpService.GET(APIConstants.GetAllUsers);
+    }
     #endregion
 
     #region [MainMethods]
-    public async Task InitilizedVMAsync() 
+    public async Task InitilizedVMAsync()
         => await UpdateUserList();
 
     public void InitilizedVM()
     {
         throw new NotImplementedException();
     }
-    public async Task CreateOrEdit(AdminPanelUserItem userInf)
+    public async Task CreateOrEdit(UserDetails userInf)
     {
         try
         {
             if (userInf != null)
             {
-                userEditVM.UserInf.User.Id = userInf.User.Id;
-                userEditVM.UserInf.User.Login = userInf.User.Login;
-                userEditVM.UserInf.User.Password = userInf.User.Password;
-
-                userEditVM.UserInf.UserDetails.FirstName = userInf.UserDetails.FirstName;
-                userEditVM.UserInf.UserDetails.SecondName = userInf.UserDetails.SecondName;
-                userEditVM.UserInf.UserDetails.MiddleName = userInf.UserDetails.MiddleName;
-
-                userEditVM.UserInf.UserDetails.Role = userInf.UserDetails.Role;
+                userEditVM.UserInf.Id = userInf.Id;
+                userEditVM.UserInf.Login = userInf.Login;
+                userEditVM.UserInf.Password = userInf.Password;
+                userEditVM.UserInf.Role = userInf.Role;
             }
             else
             {
-                userEditVM.UserInf.User.Id = 0;
-                userEditVM.UserInf.User.Login = string.Empty;
-                userEditVM.UserInf.User.Password = string.Empty;
+                userEditVM.UserInf.Id = 0;
+                userEditVM.UserInf.Login = string.Empty;
+                userEditVM.UserInf.Password = string.Empty;
 
-                userEditVM.UserInf.UserDetails.FirstName = string.Empty;
-                userEditVM.UserInf.UserDetails.SecondName = string.Empty;
-                userEditVM.UserInf.UserDetails.MiddleName = string.Empty;
-
-                userEditVM.UserInf.UserDetails.Role = "Выберите привелегию";
+                userEditVM.UserInf.Role = "Выберите привелегию";
             }
 
             NavigationService.NavigateTo($"/admin_panel/user_edit");
@@ -123,7 +114,7 @@ public class AdminPanelVM : IAdminPanelVM
                 return;
             }
 
-            var adminPanelUserItems = JsonSerializer.Deserialize<List<AdminPanelUserItem>>(response.JsonContent);
+            var adminPanelUserItems = JsonSerializer.Deserialize<List<UserDetails>>(response.Obj.ToString());
             adminPanelUserItems.Reverse();
 
             UsersList = adminPanelUserItems;
@@ -143,4 +134,3 @@ public class AdminPanelVM : IAdminPanelVM
     #endregion
 
 }
-*/

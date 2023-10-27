@@ -6,6 +6,7 @@ using OperatorApp_Client.Interfaces.ViewModels.Main.Admin;
 using OperatorApp_Client.Interfaces.ViewModels.Main.Operator;
 using OperatorApp_Client.Interfaces.ViewModels.StartUp;
 using OperatorApp_Client.MVVMS.Services;
+using OperatorApp_Client.MVVMS.ViewModels.Main.Admin;
 using OperatorApp_Client.MVVMS.ViewModels.Main.Operator;
 using OperatorApp_Client.MVVMS.ViewModels.StartUp;
 
@@ -50,11 +51,11 @@ namespace OperatorApp_Client
             builder.Services.AddSingleton<IDictionaryVM, DictionaryVM>();
             builder.Services.AddSingleton<IScheduleVM, ScheduleVM>();
             builder.Services.AddSingleton<IScheduleItemVM, ScheduleItemVM>();
-/*            builder.Services.AddSingleton<IHistoryOfScheduleVM, HistoryOfScheduleVM>();
+            builder.Services.AddSingleton<IHistoryOfScheduleVM, HistoryOfScheduleVM>();
 
             builder.Services.AddSingleton<IAdminPanelVM, AdminPanelVM>();
             builder.Services.AddSingleton<IUserEditVM, UserEditVM>();
-            builder.Services.AddSingleton<IHistoryOfDoingVM, HistoryOfDoingVM>();*/
+            builder.Services.AddSingleton<IHistoryOfDoingVM, HistoryOfDoingVM>();
 
             #endregion
 

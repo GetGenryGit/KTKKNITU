@@ -6,6 +6,8 @@
 @inject IScheduleVM vm
 @inject NavigationManager navigationService
 
+<h1>Публикация расписания</h1>
+
 <div class="date" disabled="@vm.IsLoading.ToString()">
     <input type="date" @bind="vm.SelectedDate" @bind:after="vm.ClearDataTable">
 </div>

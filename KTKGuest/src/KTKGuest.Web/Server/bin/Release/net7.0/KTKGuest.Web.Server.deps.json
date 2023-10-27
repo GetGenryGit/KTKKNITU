@@ -9,7 +9,8 @@
       "KTKGuest.Web.Server/1.0.0": {
         "dependencies": {
           "KTKGuest.Web.Client": "1.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly.Server": "7.0.10"
+          "Microsoft.AspNetCore.Components.WebAssembly.Server": "7.0.10",
+          "Npgsql": "7.0.6"
         },
         "runtime": {
           "KTKGuest.Web.Server.dll": {}
@@ -213,6 +214,17 @@
           "lib/net7.0/Microsoft.JSInterop.WebAssembly.dll": {
             "assemblyVersion": "7.0.10.0",
             "fileVersion": "7.0.1023.36439"
+          }
+        }
+      },
+      "Npgsql/7.0.6": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.1"
+        },
+        "runtime": {
+          "lib/net7.0/Npgsql.dll": {
+            "assemblyVersion": "7.0.6.0",
+            "fileVersion": "7.0.6.0"
           }
         }
       },
@@ -423,6 +435,13 @@
       "sha512": "sha512-hUvJHCoGeNDrKkuZrprL874mUd0WK0zR9LC9oY4PYKWsp747PkyrZLBIpnDXTJ8j1hYT4I5fCdO736NQxBi65g==",
       "path": "microsoft.jsinterop.webassembly/7.0.10",
       "hashPath": "microsoft.jsinterop.webassembly.7.0.10.nupkg.sha512"
+    },
+    "Npgsql/7.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TAqvwRnm3NJ0QvN7cvu6geJkbI0XPzGVRElVY5hF4gsgA+BnE12x6GM1TLhdeq+7ZKvvo3BD8jXKnXmr3tvdEw==",
+      "path": "npgsql/7.0.6",
+      "hashPath": "npgsql.7.0.6.nupkg.sha512"
     },
     "System.IO.Pipelines/7.0.0": {
       "type": "package",

@@ -16,7 +16,7 @@ public class ClassroomsController : ControllerBase
     public ClassroomsController(IConfiguration configuration)
     {
         _configuration = configuration;
-        _connectionString = _configuration.GetConnectionString("PostgreConnectionString");
+        _connectionString = _configuration.GetConnectionString("PostgreConnectionString") ?? throw new Exception();
     }
     
     // GET: api/classrooms/get
@@ -121,6 +121,14 @@ public class ClassroomsController : ControllerBase
                         cmd.ExecuteNonQuery();
                     }
                 }
+
+                query = "INSERT INTO logs(event_describe, role_id) " +
+                        "VALUES('Справочник кабинетов успешно синхронизирован!', (SELECT id FROM roles WHERE title = 'О.Р.')); ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
             }
 
             response.Result = true;
@@ -132,6 +140,20 @@ public class ClassroomsController : ControllerBase
         }
         catch (Exception ex)
         {
+            using (var conn = new NpgsqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                string query;
+                query = "INSERT INTO logs(event_describe, role_id) " +
+                        "VALUES('При синхронизации справочника кабинетов произошел сбой!', (SELECT id FROM roles WHERE title = 'О.Р.')); ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
             response.Result = false;
 #if DEBUG
             response.Message = ex.Message;

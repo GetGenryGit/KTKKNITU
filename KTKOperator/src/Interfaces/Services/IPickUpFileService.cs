@@ -2,5 +2,6 @@
 
 public interface IPickUpFileService
 {
-    Task<string> PickUpFileAsync(FilePickerFileType mask);
+    Task<string> PickUpXLXSAsync(DateTime date);
+    Task<string> PickUpMDBAsync();
 }

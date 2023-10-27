@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using OperatorApp_Client.Constants;
 using OperatorApp_Client.Interfaces.Services;
 using OperatorApp_Client.Interfaces.ViewModels.Main.Admin;
@@ -23,18 +23,17 @@ public class UserEditVM : IUserEditVM
 
     #region [Properties]
     private bool isLoading;
-    public bool IsLoading 
+    public bool IsLoading
     {
         get => isLoading;
-        set => isLoading = value; 
+        set => isLoading = value;
     }
 
-    private AdminPanelUserItem userInf = new AdminPanelUserItem 
-    { User = new(), UserDetails = new() };
-    public AdminPanelUserItem UserInf 
+    private UserDetails userInf = new UserDetails();
+    public UserDetails UserInf
     {
         get => userInf;
-        set => userInf = value; 
+        set => userInf = value;
     }
     #endregion
 
@@ -42,44 +41,44 @@ public class UserEditVM : IUserEditVM
     private void LoadingChange(bool state)
         => IsLoading = state;
 
-    *//*private async Task<APIResponse> DeleteUserById(AdminPanelUserItem user)
+    private async Task<APIResponse> DeleteByIdUser(UserDetails user)
     {
         var userConverted = JsonSerializer.Serialize(user);
 
         var postDataDeleteUser = new Dictionary<string, string>
         {
-             { "API_KEY", APIConstants.token },
-             { "obj", userConverted }
+/*             { "API_KEY", APIConstants.token },
+*/             { "userDetails", userConverted }
         };
 
         return await httpService.POST(APIConstants.DeleteUser, postDataDeleteUser);
-    }*/
+    }
 
-    /*private async Task<APIResponse> UpdateUser(AdminPanelUserItem user)
+    private async Task<APIResponse> PutUser(UserDetails user)
     {
         var userConverted = JsonSerializer.Serialize(user);
 
         var postDataUpdateUser = new Dictionary<string, string>
         {
-             { "API_KEY", APIConstants.token },
-             { "obj", userConverted }
+/*             { "API_KEY", APIConstants.token },
+*/             { "userDetails", userConverted }
         };
 
-        return await httpService.POST(APIConstants.UpdateUser, postDataUpdateUser);
-    }*/
+        return await httpService.PUT(APIConstants.UpdateUser, postDataUpdateUser);
+    }
 
-    /*private async Task<APIResponse> CreateUser(AdminPanelUserItem user)
+    private async Task<APIResponse> AddUser(UserDetails user)
     {
         var userConverted = JsonSerializer.Serialize(user);
 
         var postDataCreateUser = new Dictionary<string, string>
         {
-             { "API_KEY", APIConstants.token },
-             { "obj", userConverted }
+/*             { "API_KEY", APIConstants.token },
+*/             { "userDetails", userConverted }
         };
 
         return await httpService.POST(APIConstants.CreateUser, postDataCreateUser);
-    }*//*
+    }
     #endregion
 
     #region [MainMethods]
@@ -91,7 +90,7 @@ public class UserEditVM : IUserEditVM
     {
         throw new NotImplementedException();
     }
-    public async Task Delete(AdminPanelUserItem userEdited)
+    public async Task Delete(UserDetails userEdited)
     {
         try
         {
@@ -108,7 +107,7 @@ public class UserEditVM : IUserEditVM
                 return;
             }
 
-            APIResponse response = await DeleteUserById(userEdited);
+            APIResponse response = await DeleteByIdUser(userEdited);
 
             if (!response.Result)
             {
@@ -140,15 +139,15 @@ public class UserEditVM : IUserEditVM
                 "ОК");
         }
     }
-    public async Task Save(AdminPanelUserItem userEdited)
+    public async Task Save(UserDetails userEdited)
     {
         try
         {
             LoadingChange(true);
 
-            if (userEdited.User.Id == 0)
+            if (userEdited.Id == 0)
             {
-                APIResponse response = await CreateUser(userEdited);
+                APIResponse response = await AddUser(userEdited);
 
                 if (!response.Result)
                 {
@@ -170,7 +169,7 @@ public class UserEditVM : IUserEditVM
             }
             else
             {
-                APIResponse response = await UpdateUser(userEdited);
+                APIResponse response = await PutUser(userEdited);
 
                 if (!response.Result)
                 {
@@ -193,7 +192,7 @@ public class UserEditVM : IUserEditVM
 
             LoadingChange(false);
         }
-        catch (Exception ex) 
+        catch (Exception ex)
         {
             LoadingChange(false);
 
@@ -205,4 +204,3 @@ public class UserEditVM : IUserEditVM
     }
     #endregion
 }
-*/

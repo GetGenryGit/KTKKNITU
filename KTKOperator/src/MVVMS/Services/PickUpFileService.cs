@@ -1,16 +1,38 @@
-﻿using OperatorApp_Client.Interfaces.Services;
+﻿using OperatorApp_Client.Constants;
+using OperatorApp_Client.Interfaces.Services;
 
 namespace OperatorApp_Client.MVVMS.Services;
 
 public class PickUpFileService : IPickUpFileService
 {
     #region [MainMethods]
-    public async Task<string> PickUpFileAsync(FilePickerFileType mask)
+    public async Task<string> PickUpXLXSAsync(DateTime date)
     {
         FileResult result = await FilePicker.PickAsync(new PickOptions
         {
-            PickerTitle = "Выберите файл",
-            FileTypes = mask
+            PickerTitle = $"Выберите файл {date.ToString("dd.MM.yyyy")}",
+            FileTypes = PickUpFileConstants.MaskExcel
+        });
+
+        if (result == null)
+            return null;
+
+        if (!result.FileName.Contains(date.ToString("dd.MM.yyyy")))
+        {
+            await App.Current.MainPage.DisplayAlert("Некорректно выбран файл", "файл в название не содержит корректную дату", "ОК");
+
+            return null;
+        }
+
+        return result.FullPath;
+    }
+
+    public async Task<string> PickUpMDBAsync()
+    {
+        FileResult result = await FilePicker.PickAsync(new PickOptions
+        {
+            PickerTitle = $"Выберите файл .mdb",
+            FileTypes = PickUpFileConstants.MaskAccess
         });
 
         if (result == null)

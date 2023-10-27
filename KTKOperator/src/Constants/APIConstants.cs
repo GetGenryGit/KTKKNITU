@@ -2,8 +2,6 @@
 
 public class APIConstants
 {
-
-
 #if DEBUG
     public static string Url = "https://localhost:7170/";
 #else
@@ -20,13 +18,12 @@ public class APIConstants
     public static string ScheduleAdd = Url + "api/schedules/add";
     public static string ScheduleDelete = Url + "api/schedules/delete_by_date";
 
-    /*public static string Login = url + "api/auth/login";
+    public static string Login = Url + "api/users/login";
 
-    public static string GetAllUsers = url + "api/users/GetAll";
-    public static string CreateUser = url + "api/users/Create";
-    public static string UpdateUser = url + "api/users/Update";
-    public static string DeleteUser = url + "api/users/Delete";
+    public static string GetAllUsers = Url + "api/users/get";
+    public static string CreateUser = Url + "api/users/add";
+    public static string UpdateUser = Url + "api/users/put";
+    public static string DeleteUser = Url + "api/users/delete_by_id";
 
-    public static string GetLogsAdmin = url + "api/logs/getlogsadmin";
-    public static string GetLogsOperator = url + "api/logs/getlogsoperator";*/
+    public static string GetLogs = Url + "api/logs/get";
 }

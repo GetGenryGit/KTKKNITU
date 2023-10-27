@@ -141,7 +141,7 @@ public class ScheduleVM : IScheduleVM
 
             string srcExcelFile = string.Empty;
 
-            srcExcelFile = await pickUpFileService.PickUpFileAsync(PickUpFileConstants.MaskExcel);
+            srcExcelFile = await pickUpFileService.PickUpXLXSAsync(SelectedDate);
 
             if (string.IsNullOrWhiteSpace(srcExcelFile))
             {

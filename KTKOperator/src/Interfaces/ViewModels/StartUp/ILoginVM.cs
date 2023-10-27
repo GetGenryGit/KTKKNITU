@@ -7,10 +7,11 @@ namespace OperatorApp_Client.Interfaces.ViewModels.StartUp;
 public interface ILoginVM
 {
     bool IsLoading { get; set; }
-    User UserAuth { get; set; }
+    string Login { get; set; }
+    string Password { get; set; }   
     AuthenticationStateProvider AuthenticationProvider { get; set; }
     NavigationManager NavigationService { get; set; }
     Task InitilizedVMAsync();
     void InitilizedVM();
-    Task Login(User userAuthentication);
+    Task LoginCompletly(string login, string password);
 }

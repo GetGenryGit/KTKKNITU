@@ -1,4 +1,4 @@
-﻿/*using OperatorApp_Client.Constants;
+﻿using OperatorApp_Client.Constants;
 using OperatorApp_Client.Interfaces.Services;
 using OperatorApp_Client.Interfaces.ViewModels.Main.Admin;
 using OperatorApp_Client.MVVMS.Models;
@@ -21,16 +21,16 @@ public class HistoryOfDoingVM : IHistoryOfDoingVM
 
     #region [Properties]
     private bool isLoading;
-    public bool IsLoading 
+    public bool IsLoading
     {
-        get => isLoading; 
+        get => isLoading;
         set => isLoading = value;
     }
 
 
     private List<HistoryItem> historyList = new List<HistoryItem>();
     public List<HistoryItem> HistoryList
-    { 
+    {
         get => historyList;
         set => historyList = value;
     }
@@ -40,15 +40,15 @@ public class HistoryOfDoingVM : IHistoryOfDoingVM
     private void LoadingChange(bool state)
         => IsLoading = state;
 
-    *//*private async Task<APIResponse> GetHistoryAdmin()
+    private async Task<APIResponse> GetHistoryAdmin()
     {
         var getAllUsersPost = new Dictionary<string, string>
         {
                 { "API_KEY", APIConstants.token }
         };
 
-        return await httpService.POST(APIConstants.GetLogsAdmin, getAllUsersPost);
-    }*//*
+        return await httpService.GET(APIConstants.GetLogs + "?role=А.П.");
+    }
     #endregion
 
     #region [MainMethods]
@@ -80,14 +80,14 @@ public class HistoryOfDoingVM : IHistoryOfDoingVM
                 return;
             }
 
-            var historyList = JsonSerializer.Deserialize<List<HistoryItem>>(response.JsonContent);
+            var historyList = JsonSerializer.Deserialize<List<HistoryItem>>(response.Obj.ToString());
             historyList.Reverse();
 
             HistoryList = historyList;
 
             LoadingChange(false);
         }
-        catch (Exception ex) 
+        catch (Exception ex)
         {
             LoadingChange(false);
 
@@ -99,4 +99,3 @@ public class HistoryOfDoingVM : IHistoryOfDoingVM
     }
     #endregion
 }
-*/

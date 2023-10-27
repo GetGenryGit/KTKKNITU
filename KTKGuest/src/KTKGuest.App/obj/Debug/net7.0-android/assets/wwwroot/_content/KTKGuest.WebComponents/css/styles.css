@@ -139,7 +139,7 @@ div[disabled=true] {
 /* SpinnerStyle */
 .spinner-container{
     display: flex;
-    height: 50vh;
+    height: 40vh;
     align-items: center;
     justify-content: center;
 }

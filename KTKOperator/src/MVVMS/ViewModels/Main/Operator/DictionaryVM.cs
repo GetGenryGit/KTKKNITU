@@ -151,7 +151,7 @@ public class DictionaryVM : IDictionaryVM
     }
     public async Task SelectPath()
     {
-        PathFull = await pickUpFileService.PickUpFileAsync(PickUpFileConstants.MaskAccess); // Select File Access .mdb Button
+        PathFull = await pickUpFileService.PickUpMDBAsync(); // Select File Access .mdb Button
         
         if (!string.IsNullOrWhiteSpace(PathFull)) 
             preferencesService.FilePathMdbPreference = PathFull;

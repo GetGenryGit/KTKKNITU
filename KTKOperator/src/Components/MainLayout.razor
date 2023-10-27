@@ -4,9 +4,6 @@
 @inject NavigationManager navigationManager
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
-
-
-
 <div class="container">
     <aside class="@sidebarState">
         <div class="top">
@@ -33,26 +30,26 @@
                 <h3>Расписание</h3>
 
             </NavLink>
-            @* <NavLink href="/history_of_schedule">
+            <NavLink href="/history_of_schedule">
 
                 <span class="material-symbols-sharp">history</span>
                 <h3>Журнал изменений</h3>
 
-            </NavLink> *@
+            </NavLink>
 
             <AuthorizeView Roles="А.П.">
                 <Authorized>
-                    @* <NavLink href="/admin_panel">
+                    <NavLink href="/admin_panel">
                         <span class="material-symbols-sharp">
                             <span class="material-symbols-sharp">admin_panel_settings</span>
                         </span>
                         <h3>Панель управления пользователями</h3>
-                    </NavLink> *@
+                    </NavLink> 
 
-                    @* <NavLink href="/history_of_doing">
+                    <NavLink href="/history_of_doing">
                         <span class="material-symbols-sharp">browse_activity</span>
                         <h3>Журнал действий</h3>
-                    </NavLink> *@
+                    </NavLink>
                 </Authorized>
             </AuthorizeView>
 

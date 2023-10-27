@@ -33,30 +33,25 @@ public class LoginVM : ILoginVM
         get => isLoading;
         set => isLoading = value;
     }
-
-    private User userAuth = new User();
-    public User UserAuth {
-        get => userAuth;
-        set => userAuth = value;
-    }
+    public string Login { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
     #endregion
 
     #region [SecondoryMethods]
     private void LoadingChange(bool state)
         => IsLoading = state;
 
-    /*private async Task<APIResponse> LoginUser(User userAuth)
+    private async Task<APIResponse> LoginUser(string login, string password)
     {
-        string userAuthJson = JsonSerializer.Serialize(userAuth);
-
         var loginPost = new Dictionary<string, string>
         {
-              { "API_KEY", APIConstants.token },
-              { "obj", userAuthJson }
+/*              { "API_KEY", APIConstants.token },
+*/              { "login", login },
+                { "password", password }
         };
 
         return await httpService.POST(APIConstants.Login, loginPost);
-    }*/
+    }
     #endregion
 
     #region [MainMethods]
@@ -69,13 +64,10 @@ public class LoginVM : ILoginVM
             if (!string.IsNullOrWhiteSpace(preferencesService.LoginPreference)
                 && !string.IsNullOrWhiteSpace(preferencesService.PasswordPreference))
             {
-                var userAuthentication = new User
-                {
-                    Login = preferencesService.LoginPreference,
-                    Password = preferencesService.PasswordPreference
-                };
+                string login = preferencesService.LoginPreference;
+                string password = preferencesService.PasswordPreference;
 
-                await Login(userAuthentication);
+                await LoginCompletly(login, password);
             }
 
             LoadingChange(false);
@@ -95,18 +87,27 @@ public class LoginVM : ILoginVM
     {
         throw new NotImplementedException();
     }
-    public async Task Login(User userAuthentication)
+    public async Task LoginCompletly(string login, string password)
     {
         try
         {
             LoadingChange(true);
 
-            userAuthentication.Login = userAuthentication.Login.Trim();
-            userAuthentication.Password = userAuthentication.Password.Trim();
+            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
+            {
+                LoadingChange(false);
 
-            /*APIResponse responseLogin = await LoginUser(userAuthentication);*/
+                await displayAlertService.DisplayMessage(
+                    "Ошибка",
+                    "Поля Логин или Пароль не должны быть пустыми",
+                    "ОК");
 
-            /*if (!responseLogin.Result)
+                return;
+            }
+
+            APIResponse responseLogin = await LoginUser(login, password);
+
+            if (!responseLogin.Result)
             {
                 LoadingChange(false);
 
@@ -116,23 +117,15 @@ public class LoginVM : ILoginVM
                     "ОК");
 
                 return;
-            }*/
+            }
 
-            preferencesService.LoginPreference = userAuthentication.Login;
-            preferencesService.PasswordPreference = userAuthentication.Password;
+            preferencesService.LoginPreference = login.Trim();
+            preferencesService.PasswordPreference = password.Trim();
 
-
-
-/*            var sessionUserDetails = JsonSerializer.Deserialize<UserDetails>(responseLogin.JsonContent);
-*/
-            var user = new UserDetails
-            {
-                FirstName = "Оператор",
-                Role = "О.Р."
-            };
+            var sessionUserDetails = JsonSerializer.Deserialize<UserDetails>(responseLogin.Obj.ToString());
 
             var autenticacionExt = (AuthenticationService)AuthenticationProvider;
-            await autenticacionExt.ActualizerAuthInf(user);
+            await autenticacionExt.ActualizerAuthInf(sessionUserDetails);
 
             NavigationService.NavigateTo("/dictionary", true);
 

@@ -16,7 +16,7 @@ public class SubjectsController : ControllerBase
     public SubjectsController(IConfiguration configuration)
     {
         _configuration = configuration;
-        _connectionString = _configuration.GetConnectionString("PostgreConnectionString");
+        _connectionString = _configuration.GetConnectionString("PostgreConnectionString") ?? throw new Exception();
     }
     
     // GET: api/subjects/get
@@ -121,6 +121,14 @@ public class SubjectsController : ControllerBase
                         cmd.ExecuteNonQuery();
                     }
                 }
+
+                query = "INSERT INTO logs(event_describe, role_id) " +
+                        "VALUES('Справочник дисциплин успешно синхронизирован!', (SELECT id FROM roles WHERE title = 'О.Р.')); ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
             }
 
             response.Result = true;
@@ -132,6 +140,20 @@ public class SubjectsController : ControllerBase
         }
         catch (Exception ex)
         {
+            using (var conn = new NpgsqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                string query;
+                query = "INSERT INTO logs(event_describe, role_id) " +
+                        "VALUES('При синхронизации справочника дисциплин произошел сбой!', (SELECT id FROM roles WHERE title = 'О.Р.')); ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
             response.Result = false;
 #if DEBUG
             response.Message = ex.Message;

@@ -16,9 +16,10 @@ public class SchedulesController : ControllerBase
     public SchedulesController(IConfiguration configuration)
     {
         _configuration = configuration;
-        _connectionString = _configuration.GetConnectionString("PostgreConnectionString");
+        _connectionString = _configuration.GetConnectionString("PostgreConnectionString") ?? throw new Exception();
     }
 
+    // GET: api/schedules/get
     [HttpGet]
     [Route("[action]")]
     public IActionResult Get(DateTime date, string filter, string? value)
@@ -161,6 +162,7 @@ public class SchedulesController : ControllerBase
         }
     }
 
+    // POST: api/schedules/add
     [HttpPost]
     [Route("[action]")]
     public IActionResult Add([FromForm] DateTime date, [FromForm] string data)
@@ -238,6 +240,14 @@ public class SchedulesController : ControllerBase
                         cmd.ExecuteNonQuery();
                     }    
                 }
+
+                query = "INSERT INTO logs(event_describe, role_id) " +
+                        $"VALUES('Расписание за {date.ToString("dd.MM.yyyy")} успешно опубликованно!', (SELECT id FROM roles WHERE title = 'О.Р.')); ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
             }
 
             response.Result = true;
@@ -249,6 +259,20 @@ public class SchedulesController : ControllerBase
         }
         catch (Exception ex)
         {
+            using (var conn = new NpgsqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                string query;
+                query = "INSERT INTO logs(event_describe, role_id) " +
+                        $"VALUES('При публикации расписания за {date.ToString("dd.MM.yyyy")} произошел сбой!', (SELECT id FROM roles WHERE title = 'О.Р.')); ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
             response.Result = false;
 #if DEBUG
             response.Message = ex.Message;
@@ -261,6 +285,7 @@ public class SchedulesController : ControllerBase
         }
     }
 
+    // POST: api/schedules/delete_by_date
     [HttpPost]
     [Route("delete_by_date")]
     public IActionResult DeleteByDate([FromForm]DateTime date)
@@ -289,14 +314,36 @@ public class SchedulesController : ControllerBase
                     cmd.ExecuteNonQuery();
                 }
 
-                response.Result = true;
-                response.Message = $"Расписание за {date.ToString("dd-MM-yyyy")} успешно удаленно!";
+                query = "INSERT INTO logs(event_describe, role_id) " +
+                        $"VALUES('Расписание за {date.ToString("dd.MM.yyyy")} успешно удаленно!', (SELECT id FROM roles WHERE title = 'О.Р.')); ";
 
-                return Ok(response);
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
             }
+
+            response.Result = true;
+            response.Message = $"Расписание за {date.ToString("dd-MM-yyyy")} успешно удаленно!";
+
+            return Ok(response);
         }
         catch (Exception ex)
         {
+            using (var conn = new NpgsqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                string query;
+                query = "INSERT INTO logs(event_describe, role_id) " +
+                        $"VALUES('При удаление расписания за {date.ToString("dd.MM.yyyy")} произошел сбой!', (SELECT id FROM roles WHERE title = 'О.Р.')); ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
             response.Result = false;
 #if DEBUG
             response.Message = ex.Message;

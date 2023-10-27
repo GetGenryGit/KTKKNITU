@@ -7,9 +7,9 @@ public interface IAdminPanelVM
 {
     NavigationManager NavigationService { get; set; }
     bool IsLoading { get; set; }
-    List<AdminPanelUserItem> UsersList { get; set; }
+    List<UserDetails> UsersList { get; set; }
     Task InitilizedVMAsync();
     void InitilizedVM();
     Task UpdateUserList();
-    Task CreateOrEdit(AdminPanelUserItem userInf = null);
+    Task CreateOrEdit(UserDetails userInf = null);
 }

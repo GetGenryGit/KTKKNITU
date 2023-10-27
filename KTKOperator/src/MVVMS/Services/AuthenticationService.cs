@@ -23,7 +23,7 @@ public class AuthenticationService : AuthenticationStateProvider
         {
             claimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity(new List<Claim>
             {
-                new Claim(ClaimTypes.Name, sessionUserDetails.FirstName),
+                new Claim(ClaimTypes.Name, sessionUserDetails.Login),
                 new Claim(ClaimTypes.Role, sessionUserDetails.Role)
             }, "JwtAuth"));
 
@@ -47,7 +47,7 @@ public class AuthenticationService : AuthenticationStateProvider
 
         var claimPrincipal = new ClaimsPrincipal(new ClaimsIdentity(new List<Claim>
         {
-            new Claim(ClaimTypes.Name, sessionUserDetails.FirstName),
+            new Claim(ClaimTypes.Name, sessionUserDetails.Login),
             new Claim(ClaimTypes.Role, sessionUserDetails.Role)
         }, "JwtAuth"));
 

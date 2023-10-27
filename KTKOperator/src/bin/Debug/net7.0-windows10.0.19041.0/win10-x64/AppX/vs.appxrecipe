@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>98284DCC-82FA-4713-8A2D-FAE28F356F6E</PackageIdentityName>
-    <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=ilyao</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -19,40 +19,40 @@
     <WindowsSdkPath>
     </WindowsSdkPath>
     <LayoutDir>C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>E943175527987AF0E2F558BFBB6B1A6C7EE2F7879E9EDF446240F76C3B846FB9</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>98284DCC-82FA-4713-8A2D-FAE28F356F6E_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>98284DCC-82FA-4713-8A2D-FAE28F356F6E_9zz4h110yvjzm!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>FFAB32D91495063DA90856ADF5DBBD20960FE89D334330B6FB7042F2D829B056</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>98284DCC-82FA-4713-8A2D-FAE28F356F6E_0.0.1.0_x64__whed0kpxv3h1p</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>98284DCC-82FA-4713-8A2D-FAE28F356F6E_whed0kpxv3h1p!App</RegisteredUserModeAppID>
     <RegisteredPackageID>98284DCC-82FA-4713-8A2D-FAE28F356F6E</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=User Name</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.1</RegisteredVersion>
+    <RegisteredPackagePublisher>CN=ilyao</RegisteredPackagePublisher>
+    <RegisteredVersion>0.0.1.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-25T19:48:03.090</Modified>
+      <Modified>2023-10-27T02:02:41.786</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-25T19:15:54.356</Modified>
+      <Modified>2023-10-27T01:13:50.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\OperatorApp_Client.runtimeconfig.json">
       <PackagePath>OperatorApp_Client.runtimeconfig.json</PackagePath>
-      <Modified>2023-10-25T19:03:54.174</Modified>
+      <Modified>2023-10-26T19:23:53.753</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\OperatorApp_Client.dll">
       <PackagePath>OperatorApp_Client.dll</PackagePath>
-      <Modified>2023-10-25T19:41:52.935</Modified>
+      <Modified>2023-10-27T01:37:09.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>OperatorApp_Client.exe</PackagePath>
-      <Modified>2023-10-25T19:41:52.944</Modified>
+      <Modified>2023-10-27T01:37:09.918</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKOperator\src\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\OperatorApp_Client.deps.json">
       <PackagePath>OperatorApp_Client.deps.json</PackagePath>
-      <Modified>2023-10-25T19:03:54.094</Modified>
+      <Modified>2023-10-26T19:23:53.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.10\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
