@@ -297,3 +297,4 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-ios\iossimu
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-ios\iossimulator-x64\KTKGuest.App.pdb
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-ios\iossimulator-x64\KTKGuest.App.genruntimeconfig.cache
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-ios\iossimulator-x64\ref\KTKGuest.App.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-ios\iossimulator-x64\build-signature\signature

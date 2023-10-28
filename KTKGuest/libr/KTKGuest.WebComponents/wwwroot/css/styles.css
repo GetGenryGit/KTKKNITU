@@ -222,18 +222,18 @@ section > div  div {
 section > div > div > p {
     margin: 0px 0px;
     padding: 20px 0px 24px 0px;
-    width: 33px;
+    width: 25px;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    color: #000000;
+    color: Gray;
 }
 section > div > div > div {
     position: absolute;
     margin: 0px 0px;
     width: calc(100% - 50px);
     top: 0px;
-    left: 33px;
+    left: 26px;
     border-radius: 10px;
     outline: 1px solid #EAEAEA;
     background-color: var(--white-color);
