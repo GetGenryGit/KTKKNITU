@@ -1,4 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Raw\AboutAssets.txt" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\app.css" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\bootstrap\bootstrap.min.css" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\bootstrap\bootstrap.min.css.map" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\images\calendar.png" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\images\event.png" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\font\fonts\open-iconic.eot" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\font\fonts\open-iconic.otf" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\font\fonts\open-iconic.svg" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\font\fonts\open-iconic.ttf" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\font\fonts\open-iconic.woff" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\FONT-LICENSE" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\ICON-LICENSE" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\open-iconic\README.md" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\styles.css" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\wwwroot\css\toast.css" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\wwwroot\favicon.ico" />
+    <Content Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\wwwroot\index.html" />
+  </ItemGroup>
 </Project>
