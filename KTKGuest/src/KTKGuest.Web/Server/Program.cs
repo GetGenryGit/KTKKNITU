@@ -1,4 +1,5 @@
 using Blazored.LocalStorage;
+using Blazored.SessionStorage;
 using KTKGuest.WebComponents.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IHttpService, HttpService>();
 builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddBlazoredSessionStorage();
 builder.Services.AddScoped<IToastService, ToastService>();
 
 

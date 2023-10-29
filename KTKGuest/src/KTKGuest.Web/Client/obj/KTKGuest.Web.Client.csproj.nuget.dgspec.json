@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[4.4.0, )"
             },
+            "Blazored.SessionStorage": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
               "version": "[7.0.5, )"

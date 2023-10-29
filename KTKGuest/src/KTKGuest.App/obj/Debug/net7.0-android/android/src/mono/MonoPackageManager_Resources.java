@@ -9,6 +9,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Controls.dll",
 		"Microsoft.Maui.Essentials.dll",
 		"Blazored.LocalStorage.dll",
+		"Blazored.SessionStorage.dll",
 		"GoogleGson.dll",
 		"Microsoft.AspNetCore.Authorization.dll",
 		"Microsoft.AspNetCore.Components.dll",

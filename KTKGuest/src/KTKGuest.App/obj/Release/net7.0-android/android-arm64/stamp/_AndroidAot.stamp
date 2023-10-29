@@ -1,4 +1,5 @@
 obj\Release\net7.0-android\android-arm64\aot\Blazored.LocalStorage.dll.so
+obj\Release\net7.0-android\android-arm64\aot\Blazored.SessionStorage.dll.so
 obj\Release\net7.0-android\android-arm64\aot\Microsoft.AspNetCore.Components.dll.so
 obj\Release\net7.0-android\android-arm64\aot\Microsoft.AspNetCore.Components.Web.dll.so
 obj\Release\net7.0-android\android-arm64\aot\Microsoft.AspNetCore.Components.WebView.dll.so

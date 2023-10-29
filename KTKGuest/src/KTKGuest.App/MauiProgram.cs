@@ -1,6 +1,7 @@
 ﻿using Blazored.LocalStorage;
 using Microsoft.Extensions.Logging;
 using KTKGuest.WebComponents.Services;
+using Blazored.SessionStorage;
 
 namespace KTKGuest.App;
 
@@ -23,6 +24,8 @@ public static class MauiProgram
         builder.Services.AddTransient<IHttpService, HttpService>();
         builder.Services.AddBlazoredLocalStorage();
         builder.Services.AddScoped<IToastService, ToastService>();
+        builder.Services.AddBlazoredSessionStorage();
+
 
 
         return builder.Build();

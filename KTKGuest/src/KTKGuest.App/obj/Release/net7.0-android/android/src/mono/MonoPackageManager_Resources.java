@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "KTKGuest.App.dll" comes first in this list. */
 		"KTKGuest.App.dll",
 		"Blazored.LocalStorage.dll",
+		"Blazored.SessionStorage.dll",
 		"Microsoft.AspNetCore.Components.dll",
 		"Microsoft.AspNetCore.Components.dll",
 		"Microsoft.AspNetCore.Components.dll",

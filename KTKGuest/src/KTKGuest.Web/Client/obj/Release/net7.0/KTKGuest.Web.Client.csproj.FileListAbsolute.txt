@@ -1674,3 +1674,7 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Release\net7.0\KTKG
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Release\net7.0\refint\KTKGuest.Web.Client.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Release\net7.0\KTKGuest.Web.Client.pdb
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Release\net7.0\ref\KTKGuest.Web.Client.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Release\net7.0\wwwroot\_framework\Blazored.SessionStorage.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Release\net7.0\wwwroot\_framework\Blazored.SessionStorage.dll.gz
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Release\net7.0\Blazored.SessionStorage.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Release\net7.0\build-gz\wuH3Yslx.gz

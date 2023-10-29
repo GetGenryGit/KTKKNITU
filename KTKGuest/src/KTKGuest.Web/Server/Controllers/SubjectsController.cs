@@ -38,7 +38,8 @@ public class SubjectsController : ControllerBase
                 string query = "SELECT " +
                                "title " +
                                "FROM subjects " +
-                               "WHERE status = '1'; ";
+                               "WHERE status = '1' " +
+                               "ORDER BY title ASC; ";
 
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {

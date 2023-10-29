@@ -2,8 +2,11 @@
 
 @inject IHttpService httpService
 @inject ILocalStorageService localStorage
+@inject ISessionStorageService sessionStorage
 @inject IToastService toastService
+@inject NavigationManager navigationManager
 
+@using Blazored.SessionStorage;
 @using KTKGuest.WebComponents.Services
 @using KTKGuest.WebComponents.Data
 @using KTKGuest.WebComponents.Constants
@@ -21,40 +24,21 @@ else
     <div class="sort-tools" disabled="@isBusy.ToString()">
         <input class="sel-date" type="date" id="day"  @bind="SelectedDate" @bind:after="async () => await OnSelectedDateChange()">
 
-        <select class="sel" id="type" @bind="SelectedType" @bind:after="async () => await OnSelectedTypeChange()">
+        <select class="sel-type" id="type" @bind="SelectedType" @bind:after="async () => await OnSelectedTypeChange()">
             <option value="Группы">Группы</option>
             <option value="Учителя">Учителя</option>
             <option value="Кабинеты">Кабинеты</option>
         </select>
 
-        <select class="sel" id="value" @bind="SelectedValue" @bind:after="async () => await OnSelectedValueChange()">
-            <option value="Не выбрано">Не выбрано</option>
-            @if (collectivesList != null && teachersList != null && classroomsList != null)
-            {
-                @if (SelectedType == "Группы")
-                {
-                    foreach (var item in collectivesList)
-                    {
-                        <option value="@item">@item</option>
-                    }
-                }
-                else if (SelectedType == "Учителя")
-                {
-                    foreach (var item in teachersList)
-                    {
-                        <option value="@item">@item</option>
-                    }
-                }
-                else if (SelectedType == "Кабинеты")
-                {
-                    foreach (var item in classroomsList)
-                    {
-                        <option value="@item">@item</option>
-                    }
-                }
-            }
+        <input class="sel-value" id="value" type="search" @bind="SelectedValue" @onclick="NavigateSelectValue" readonly />
+        @if (SelectedValue != "Не выбрано")
+        {
+            <div class="clear-value" @onclick=" async () => await ClearValue()">
+                Очистить
+            </div>
+        }
+        
 
-        </select>
     </div>
 
     <div class="day-of-week">
@@ -83,23 +67,22 @@ else
     {
         <ScheduleTables ScheduleList="scheduleList"></ScheduleTables>
     }   
-    
 }
 
 
 @code{
     #region [Properties]
-        private const string defaultChoice = "Не выбрано";
+    private const string defaultChoice = "Не выбрано";
 
     private bool isSchedulePublished = false;
-    
+
     private DateTime selectedDate = DateTime.Now;
     public DateTime SelectedDate
     {
         get => selectedDate;
         set => selectedDate = value == DateTime.MinValue ? DateTime.Now : value ; 
     }
-    
+
     private string selectedType = "Группы";
     public string SelectedType
     {
@@ -109,7 +92,7 @@ else
             selectedType = value == null ? "Группы" : value;
         }
     }
-    
+
     private string selectedValue = "Не выбрано";
     public string SelectedValue
     {
@@ -119,39 +102,44 @@ else
             selectedValue = value == null ? "Не выбрано" : value ;
         }
     }
-    
+
     private List<string> collectivesList { get; set; }
     private List<string> teachersList { get; set; }
     private List<string> classroomsList { get; set; }
-    
+
     private bool isBusy { get; set; }
-    
+
     private bool isInitiliazedLoading { get; set; }
 
     private ScheduleObj scheduleList { get; set; } = new();
     #endregion
-    
+
     #region [SecondoryMethods]
     private void LoadingChange(bool state)
         => isBusy = state;
-    
     private async Task GetDictionaries()
     {
         APIResponse responseCollective = await httpService.GET(APIConstants.GetCollectives);
         APIResponse responseTeacher = await httpService.GET(APIConstants.GetTeachers);
         APIResponse responseClassroom = await httpService.GET(APIConstants.GetClassrooms);
-        
+
         collectivesList = responseCollective.Result 
             ? JsonSerializer.Deserialize<List<string>>(responseCollective.obj.ToString())
             : new List<string> { responseCollective.Message };
-        
-        teachersList = responseTeacher.Result 
+
+        await localStorage.SetItemAsStringAsync(nameof(collectivesList), JsonSerializer.Serialize(collectivesList));
+
+        teachersList = responseTeacher.Result
             ? JsonSerializer.Deserialize<List<string>>(responseTeacher.obj.ToString())
             : new List<string> { responseTeacher.Message };
+
+        await localStorage.SetItemAsStringAsync(nameof(teachersList), JsonSerializer.Serialize(teachersList));
 
         classroomsList = responseClassroom.Result 
             ? JsonSerializer.Deserialize<List<string>>(responseClassroom.obj.ToString())
             : new List<string> { responseClassroom.Message };
+
+        await localStorage.SetItemAsStringAsync(nameof(classroomsList), JsonSerializer.Serialize(classroomsList));
     }
     private ScheduleObj ConvertScheduleList(ScheduleGet scheduleGet, string typeSchedule, string valueSchedule)
     {
@@ -165,18 +153,18 @@ else
         {
             isSchedulePublished = true;
         }
-        
+
         if (typeSchedule == "Учителя") // teacher
         {
             if (valueSchedule != "Не выбрано")
             {   
                 var scheduleItemObj = new ScheduleItemObj { Title = valueSchedule };
                 var scheduleItemTitleList = scheduleGet.ScheduleListData;
-             
+
                 for (int i = 0; i < scheduleGet.StartAt.Count; i++)
                 {   
                     var lessonContainer = new LessonItemObj { Index = (i + 1), StartAt = scheduleGet.StartAt[i], EndAt = scheduleGet.EndAt[i], };
-                        
+
                     var lessonsIndexList = scheduleItemTitleList.Where(l => l.ClassIndex == (i + 1));
 
                     if (lessonsIndexList != null)
@@ -192,7 +180,7 @@ else
                                     Title3 = lesson.Subject,
                                     SubGroup = lesson.SubGroup,
                                 };  
-                            
+
                                 lessonContainer.Items.Add(lessonItem);
                             }
                         }
@@ -201,7 +189,7 @@ else
                     {
                         lessonContainer.Items.Add(new ItemObj());
                     }
-                    
+
                     scheduleItemObj.LessonItems.Add(lessonContainer);
                 }
                 scheduleObj.ScheduleItems.Add(scheduleItemObj);
@@ -213,7 +201,7 @@ else
                     var scheduleItemObj = new ScheduleItemObj { Title = teacher };
 
                     var scheduleItemTitleList = scheduleGet.ScheduleListData.Where(l => l.Teacher == teacher);
-                    
+
                     for (int i = 0; i < scheduleGet.StartAt.Count; i++)
                     {
                         var lessonContainer = new LessonItemObj { Index = (i + 1), StartAt = scheduleGet.StartAt[i], EndAt = scheduleGet.EndAt[i] };
@@ -253,7 +241,7 @@ else
             {
                 var scheduleItemObj = new ScheduleItemObj { Title = valueSchedule };
                 var scheduleItemTitleList = scheduleGet.ScheduleListData;
-                
+
                 for (int i = 0; i < scheduleGet.StartAt.Count; i++)
                 {
                     var lessonContainer = new LessonItemObj { Index = (i + 1), StartAt = scheduleGet.StartAt[i], EndAt = scheduleGet.EndAt[i] };
@@ -329,7 +317,7 @@ else
                 var scheduleItemObj = new ScheduleItemObj { Title = valueSchedule };
 
                 var scheduleItemTitleList = scheduleGet.ScheduleListData;
-     
+
                 for (int i = 0; i < scheduleGet.StartAt.Count; i++)
                 {
                     var lessonContainer = new LessonItemObj { Index = (i + 1), StartAt = scheduleGet.StartAt[i], EndAt = scheduleGet.EndAt[i] };
@@ -406,7 +394,7 @@ else
                 }   
             }
         }   
-        
+
         return scheduleObj;
     }
     private async Task<APIResponse> GetScheduleAsync(DateTime date, string typeSchedule, string valueSchedule)
@@ -425,17 +413,45 @@ else
                 urlBuild += $"&filter=2";
             else if (typeSchedule == "Кабинеты")
                 urlBuild += $"&filter=3";
-            
+
             urlBuild += $"&value={valueSchedule}";
         }
 
         return await httpService.GET(urlBuild);
     }
-    
     private async Task GetSchedules(DateTime dateSelected, string typeSelected, string valueSelected)
     {
         APIResponse scheduleResponse = await GetScheduleAsync(dateSelected, typeSelected, valueSelected);
         scheduleList = ConvertScheduleList(JsonSerializer.Deserialize<ScheduleGet>(scheduleResponse.obj.ToString()) , typeSelected, valueSelected);
+    }
+    public void NavigateSelectValue()
+        => navigationManager.NavigateTo($"/select_item/{selectedType.ToLower()}");
+    public async Task ClearValue()
+    {
+        try
+        {
+            LoadingChange(true);
+
+            SelectedValue = "Не выбрано";
+
+            await localStorage.RemoveItemAsync(nameof(selectedValue));
+            await GetSchedules(SelectedDate, SelectedType, SelectedValue);
+
+            LoadingChange(false);
+        }
+        catch (Exception ex)
+        {
+            LoadingChange(false);
+#if DEBUG
+    toastService.ShowError(ex.Message, "Ошибка");
+#else
+            toastService.ShowError("Отсутствует соединение с сервером! Пожалуйста обновите страницу или попробуйте позже!", "Ошибка");
+#endif
+            await Task.Delay(10000);
+            await ClearValue();
+
+            toastService.ShowSuccess("Соединение восстановалено!", "Успех");
+        }
     }
     #endregion
 
@@ -445,26 +461,26 @@ else
         try
         {
             LoadingChange(true);
-            
+
+            await sessionStorage.SetItemAsStringAsync(nameof(selectedDate), selectedDate.ToString());
             await GetSchedules(SelectedDate, SelectedType, SelectedValue);
-            
+
             LoadingChange(false);
         }
         catch (Exception ex)
         {
             LoadingChange(false);
 #if DEBUG
-            toastService.ShowError(ex.Message, "Ошибка");
+    toastService.ShowError(ex.Message, "Ошибка");
 #else
             toastService.ShowError("Отсутствует соединение с сервером! Пожалуйста обновите страницу или попробуйте позже!", "Ошибка");
 #endif
             await Task.Delay(10000);
             await OnSelectedDateChange();
-            
+
             toastService.ShowSuccess("Соединение восстановалено!", "Успех");
         }
     }
-    
     public async Task OnSelectedTypeChange()
     {
         try
@@ -472,51 +488,25 @@ else
             LoadingChange(true);
 
             SelectedValue = defaultChoice;
-            
+
             await localStorage.SetItemAsStringAsync(nameof(selectedValue), SelectedValue);
             await localStorage.SetItemAsStringAsync(nameof(selectedType), SelectedType);
-            
+
             await GetSchedules(SelectedDate, SelectedType, SelectedValue);
-            
+
             LoadingChange(false);
         }
         catch (Exception ex)
         {
             LoadingChange(false);
 #if DEBUG
-            toastService.ShowError(ex.Message, "Ошибка");
+    toastService.ShowError(ex.Message, "Ошибка");
 #else
             toastService.ShowError("Отсутствует соединение с сервером! Пожалуйста обновите страницу или попробуйте позже!", "Ошибка");
 #endif
             await Task.Delay(10000);
             await OnSelectedTypeChange();
-            
-            toastService.ShowSuccess("Соединение восстановалено!", "Успех");
-        }
-    }
-    
-    public async Task OnSelectedValueChange()
-    {
-        try
-        {
-            LoadingChange(true);
 
-            await localStorage.SetItemAsStringAsync(nameof(selectedValue), SelectedValue);
-            await GetSchedules(SelectedDate, SelectedType, SelectedValue);
-            
-            LoadingChange(false);
-        }
-        catch (Exception ex)
-        {
-            LoadingChange(false);
-#if DEBUG
-            toastService.ShowError(ex.Message, "Ошибка");
-#else
-            toastService.ShowError("Отсутствует соединение с сервером! Пожалуйста обновите страницу или попробуйте позже!", "Ошибка");
-#endif
-            await Task.Delay(10000);
-            await OnSelectedValueChange(); 
-            
             toastService.ShowSuccess("Соединение восстановалено!", "Успех");
         }
     }
@@ -528,7 +518,10 @@ else
         try
         {
             isInitiliazedLoading = true;
-            
+
+            var dateSession = await sessionStorage.GetItemAsStringAsync(nameof(selectedDate));
+
+            SelectedDate = Convert.ToDateTime(await sessionStorage.GetItemAsStringAsync(nameof(selectedDate)));
             SelectedType = await localStorage.GetItemAsStringAsync(nameof(selectedType));
             SelectedValue = await localStorage.GetItemAsStringAsync(nameof(selectedValue));
 

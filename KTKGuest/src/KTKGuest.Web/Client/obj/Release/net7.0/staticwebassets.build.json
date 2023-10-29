@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ja1KLHuRFFMEr4N9KJl9Ovrzi6gK9RAJiTpfGvJM2B8=",
+  "Hash": "bVncMHmcrlEq9pxeB28taoJPLvLtrAzN5bdbq2R/hrI=",
   "Source": "KTKGuest.Web.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -357,6 +357,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\ilyao\\.nuget\\packages\\blazored.localstorage\\4.4.0\\lib\\net7.0\\Blazored.LocalStorage.dll"
+    },
+    {
+      "Identity": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\bin\\Release\\net7.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll",
+      "SourceId": "KTKGuest.Web.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\bin\\Release\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.SessionStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\ilyao\\.nuget\\packages\\blazored.sessionstorage\\2.4.0\\lib\\net7.0\\Blazored.SessionStorage.dll"
     },
     {
       "Identity": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\bin\\Release\\net7.0\\wwwroot\\_framework\\dotnet.7.0.10.s3c7zmw6ax.js",
@@ -7004,6 +7021,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\bin\\Release\\net7.0\\wwwroot\\_framework\\System.ComponentModel.EventBasedAsync.dll"
+    },
+    {
+      "Identity": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\obj\\Release\\net7.0\\build-gz\\wuH3Yslx.gz",
+      "SourceId": "KTKGuest.Web.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\bin\\Release\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.SessionStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\bin\\Release\\net7.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\bin\\Release\\net7.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll"
     },
     {
       "Identity": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\obj\\Release\\net7.0\\build-gz\\WwxE7V6m.gz",

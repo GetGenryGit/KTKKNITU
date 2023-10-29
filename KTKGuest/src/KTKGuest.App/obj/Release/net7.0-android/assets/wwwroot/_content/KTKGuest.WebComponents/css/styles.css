@@ -20,20 +20,6 @@
     margin-left: 15px;
 }
 
-/* Hide the cancel button */
-::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-}
-
-/* Hide the magnifying glass */
-::-webkit-search-results-button {
-    -webkit-appearance: none;
-}
-
-/* Remove the rounded corners */
-input[type=search] {
-    -webkit-appearance: none;
-}
 
 .loading-screen{
     display: flex;
@@ -79,7 +65,7 @@ header{
     border: 1px solid rgb(176, 176, 176);
     border-radius: 10px;
     width: 150px;
-    height: 49px;
+    height: 45px;
     background-color: var(--gray-color);
     color: var(--white-color);
     font-size: 20px;
@@ -87,10 +73,10 @@ header{
     padding: 1px 15px 1px 15px;
     margin: 10px;
 }
-.sort-tools > .sel{
+.sort-tools > .sel-type{
     border: 1px solid rgb(176, 176, 176);
     border-radius: 10px;
-    height: 49px;
+    height: 45px;
     background-color: white;
     color: black;
     font-size: 20px;
@@ -99,16 +85,37 @@ header{
     margin: 10px;
 }
 
+    .sort-tools > .sel-value {
+        border: 1px solid rgb(176, 176, 176);
+        border-radius: 10px;
+        height: 45px;
+        text-align: center;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 1px 15px 1px 15px;
+        margin: 10px;
+    }
+
+    .clear-value{
+        display: flex;
+        align-items: center;
+        color: var(--gray-color);
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
 div[disabled=true] {
     pointer-events: none;
     opacity: 0.4;
 }
 
 #date{
-    width: 160px;
+    width: 140px;
 }
 #type{
-    width: 160px;;
+    width: 160px;
 }
 #value{
     width: auto;
@@ -126,8 +133,6 @@ div[disabled=true] {
     color: var(--gray-color);
     font-weight: 700;
     font-size: 22px;
-
-
 }
 .day-of-week > hr{
     margin-top: 5px;
@@ -312,9 +317,21 @@ section > div > div > div > main > div > span > b {
     .sort-tools{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: minmax(65px, auto);
+        grid-auto-rows: minmax(50px 50px);
         justify-content: center;
     }
+
+    .clear-value {
+        display: flex;
+        height:30px;
+        width: 95%;
+        justify-content: end;
+        color: var(--gray-color);
+        font-size: 20px;
+        text-decoration: underline;
+        grid-column: 2/2;
+    }
+
     #date{
         width: 75%;
     }
@@ -326,7 +343,7 @@ section > div > div > div > main > div > span > b {
         grid-column: 1/3;
     }
     .day-of-week{
-        margin-top: 85px;
+        margin-top: 90px;
         justify-content: center;
         width: 99%;
     }

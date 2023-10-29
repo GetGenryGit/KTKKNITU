@@ -2512,3 +2512,7 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\uroZcSC7.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\+e8l8zYn.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\5moNr1WT.gz
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.SessionStorage.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.SessionStorage.dll.gz
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\Blazored.SessionStorage.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\wuH3Yslx.gz

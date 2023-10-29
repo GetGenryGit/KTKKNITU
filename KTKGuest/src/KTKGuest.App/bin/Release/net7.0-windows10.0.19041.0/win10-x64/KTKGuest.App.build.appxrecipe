@@ -592,6 +592,9 @@
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\Blazored.LocalStorage.dll">
       <PackagePath>Blazored.LocalStorage.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\Blazored.SessionStorage.dll">
+      <PackagePath>Blazored.SessionStorage.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.AspNetCore.Authorization.dll">
       <PackagePath>Microsoft.AspNetCore.Authorization.dll</PackagePath>
     </AppxPackagedFile>

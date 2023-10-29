@@ -170,3 +170,4 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Debug\net7.0\refint
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Debug\net7.0\KTKGuest.Web.Server.pdb
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Debug\net7.0\KTKGuest.Web.Server.genruntimeconfig.cache
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Debug\net7.0\ref\KTKGuest.Web.Server.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Blazored.SessionStorage.dll

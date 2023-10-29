@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ieGrd4AblEgjsL4q1tg928Yvu57L1+8aBA+riBjDI7cg7cnGMXqCYtWSQD3UtVQmvTMFVj3sZ5TQEqAbxBaUOA==",
+  "dgSpecHash": "Toof91sBu2R59wiIjEcrsvTZ7xqLAsUSirJcwvaX0imc9lZKgbc4XsvbUgQ8BZnocDtjTd1Kqwzet3MsIfBRdg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\libr\\KTKGuest.WebComponents\\KTKGuest.WebComponents.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilyao\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
+    "C:\\Users\\ilyao\\.nuget\\packages\\blazored.sessionstorage\\2.4.0\\blazored.sessionstorage.2.4.0.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.5\\microsoft.aspnetcore.authorization.7.0.5.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.5\\microsoft.aspnetcore.components.7.0.5.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.5\\microsoft.aspnetcore.components.analyzers.7.0.5.nupkg.sha512",

@@ -287,3 +287,4 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Debug\net7.0-maccatalyst\m
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\KTKGuest.App.pdb
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\KTKGuest.App.genruntimeconfig.cache
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\ref\KTKGuest.App.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Blazored.SessionStorage.dll
