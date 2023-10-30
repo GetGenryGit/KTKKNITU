@@ -56,7 +56,7 @@ header{
 
 /*  Filter */
 .sort-tools{
-    margin-top: 10px ;
+    margin-top: 20px ;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -211,7 +211,7 @@ section > h1 {
 }
 section > div {
     /* position: absolute; */
-    /* width: 466px; */
+    /*width: 466px; */
     height: 515px;
     outline: 1px solid #EAEAEA;
     outline-offset: -1px;
@@ -315,11 +315,23 @@ section > div > div > div > main > div > span > b {
 @media screen and (max-width: 768px){
     /*  Filter */
     .sort-tools{
+        margin-top: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: minmax(50px 50px);
         justify-content: center;
     }
+        .sort-tools > .sel-date {
+            font-size: 18px;
+        }
+
+        .sort-tools > .sel-type {
+            font-size: 18px;
+        }
+
+        .sort-tools > .sel-value {
+            font-size: 18px;
+        }
 
     .clear-value {
         display: flex;
@@ -343,7 +355,7 @@ section > div > div > div > main > div > span > b {
         grid-column: 1/3;
     }
     .day-of-week{
-        margin-top: 95px;
+        margin-top: 105px;
         justify-content: center;
         width: 99%;
     }
@@ -358,7 +370,6 @@ section > div > div > div > main > div > span > b {
     /* Schedule Container */
 
     /* Schedule */
-    
     /* Schedule */
 
 }
