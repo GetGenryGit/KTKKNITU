@@ -306,4 +306,3 @@ C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-ios\iossimulator-x64\re
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-ios\iossimulator-x64\OperatorApp_Client.pdb
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-ios\iossimulator-x64\OperatorApp_Client.genruntimeconfig.cache
 C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-ios\iossimulator-x64\ref\OperatorApp_Client.dll
-C:\Users\ilyao\KTKKNITU\KTKOperator\src\obj\Debug\net7.0-ios\iossimulator-x64\build-signature\signature

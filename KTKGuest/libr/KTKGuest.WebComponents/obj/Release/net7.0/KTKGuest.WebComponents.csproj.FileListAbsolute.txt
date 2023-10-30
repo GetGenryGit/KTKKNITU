@@ -40,3 +40,4 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\obj\Release\net7.0\
 C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\obj\Release\net7.0\refint\KTKGuest.WebComponents.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\obj\Release\net7.0\KTKGuest.WebComponents.pdb
 C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\obj\Release\net7.0\ref\KTKGuest.WebComponents.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\libr\KTKGuest.WebComponents\obj\Release\net7.0\KTKGuest.WebComponents.sourcelink.json

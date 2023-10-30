@@ -324,3 +324,4 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x86\KTKGuest.App.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x86\refint\KTKGuest.App.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x86\KTKGuest.App.pdb
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x86\Blazored.SessionStorage.dll

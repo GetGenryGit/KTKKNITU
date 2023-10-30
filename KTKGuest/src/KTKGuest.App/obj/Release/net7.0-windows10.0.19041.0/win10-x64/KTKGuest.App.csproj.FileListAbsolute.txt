@@ -8,6 +8,7 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Blazored.LocalStorage.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Blazored.SessionStorage.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Authorization.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.Forms.dll
@@ -351,4 +352,3 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Blazored.SessionStorage.dll

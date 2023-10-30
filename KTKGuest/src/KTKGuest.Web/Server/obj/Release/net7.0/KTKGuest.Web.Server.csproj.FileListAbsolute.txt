@@ -114,3 +114,4 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Release\net7.0\KTKG
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Release\net7.0\KTKGuest.Web.Server.genruntimeconfig.cache
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Release\net7.0\ref\KTKGuest.Web.Server.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Release\net7.0\Blazored.SessionStorage.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Release\net7.0\KTKGuest.Web.Server.sourcelink.json

@@ -65,7 +65,7 @@ header{
     border: 1px solid rgb(176, 176, 176);
     border-radius: 10px;
     width: 150px;
-    height: 45px;
+    height: 49px;
     background-color: var(--gray-color);
     color: var(--white-color);
     font-size: 20px;
@@ -76,7 +76,7 @@ header{
 .sort-tools > .sel-type{
     border: 1px solid rgb(176, 176, 176);
     border-radius: 10px;
-    height: 45px;
+    height: 49px;
     background-color: white;
     color: black;
     font-size: 20px;
@@ -88,7 +88,7 @@ header{
     .sort-tools > .sel-value {
         border: 1px solid rgb(176, 176, 176);
         border-radius: 10px;
-        height: 45px;
+        height: 49px;
         text-align: center;
         background-color: white;
         color: black;

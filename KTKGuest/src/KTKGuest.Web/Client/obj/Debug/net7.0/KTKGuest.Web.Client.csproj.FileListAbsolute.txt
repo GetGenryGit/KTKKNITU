@@ -2303,12 +2303,16 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\KTKGue
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\refint\KTKGuest.Web.Client.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\KTKGuest.Web.Client.pdb
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\ref\KTKGuest.Web.Client.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.SessionStorage.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.SessionStorage.dll.gz
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\Blazored.SessionStorage.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\dotnet.7.0.10.s3c7zmw6ax.js
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\icudt.dat
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\icudt.dat.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\dotnet.7.0.10.s3c7zmw6ax.js.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\icudt.dat
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\doxQ71lc.gz
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\wuH3Yslx.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\eKz8eLdj.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\DGQYRVIB.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\WwxE7V6m.gz
@@ -2512,7 +2516,3 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\uroZcSC7.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\+e8l8zYn.gz
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\5moNr1WT.gz
-C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.SessionStorage.dll
-C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.SessionStorage.dll.gz
-C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\bin\Debug\net7.0\Blazored.SessionStorage.dll
-C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Client\obj\Debug\net7.0\build-gz\wuH3Yslx.gz

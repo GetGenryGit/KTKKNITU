@@ -54,7 +54,7 @@ else
             align-items: center;
             justify-content: center;
             border: 1px solid rgb(176, 176, 176);
-            height: 50px;
+            height: 40px;
             width: 60px;
             border-radius: 20px;
         }
@@ -77,13 +77,13 @@ else
         justify-content: center;
         border: 1px solid rgb(176, 176, 176);
         border-radius: 10px;
-        height: 50px;
+        height: 45px;
         width: 100%;
         background-color: white;
         color: black;
         font-size: 18px;
         font-weight: 700;
-        padding: 1px 15px 1px 15px;
+        padding: 1px 20px 1px 20px;
         margin: 5px;
         box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.25);
     }
@@ -94,14 +94,14 @@ else
         justify-content: center;
         border: 1px solid rgb(176, 176, 176);
         border-radius: 10px;
-        height: 50px;
+        height: 45px;
         width: auto;
         background-color: white;
         color: black;
         font-size: 18px;
         font-weight: 700;
-        padding: 1px 15px 1px 15px;
-        margin: 5px;
+        padding: 1px 20px 1px 20px;
+        margin: 7px;
         box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.25);
     }
 
@@ -111,14 +111,14 @@ else
         justify-content: center;
         border: 1px solid rgb(176, 176, 176);
         border-radius: 10px;
-        height: 50px;
+        height: 45px;
         width: auto;
         background-color: white;
         color: black;
         font-size: 18px;
         font-weight: 700;
-        padding: 1px 15px 1px 15px;
-        margin: 5px;
+        padding: 1px 20px 1px 20px;
+        margin: 7px;
         box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.25);
     }
 </style>
@@ -171,10 +171,12 @@ else
                 break;
             case "группы":
                 list = JsonSerializer.Deserialize<List<string>>(await localStorage.GetItemAsStringAsync("collectivesList"));
+                list = list.OrderBy(x => x.Length).ToList();
                 dictionaryStyleClass = collectiveStyle;
                 break;   
             case "кабинеты":
                 list = JsonSerializer.Deserialize<List<string>>(await localStorage.GetItemAsStringAsync("classroomsList"));
+                list = list.OrderBy(x => x.Length).ToList();
                 dictionaryStyleClass = classroomStyle;
                 break;
             default:
