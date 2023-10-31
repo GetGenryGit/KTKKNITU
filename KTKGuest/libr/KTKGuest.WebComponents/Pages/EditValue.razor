@@ -6,9 +6,6 @@
 
 <div class="container-search-bar">
     <input type="search" placeholder="Поиск..." @bind="FilterValue" />
-    <div>
-        <span class="material-symbols-sharp" @onclick="filterListByValue">search</span>
-    </div>
 </div>
 
 
@@ -47,22 +44,6 @@ else
             border: none;
             border-radius: 35px;
             padding: 1px 15px 1px 15px;
-        }
-
-        .container-search-bar > div{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgb(176, 176, 176);
-            height: 40px;
-            width: 60px;
-            border-radius: 20px;
-        }
-
-        .container-search-bar > div > span{
-            display: flex;
-            align-items: center;
-            font-weight: 800;
         }
 
     .container-frames{

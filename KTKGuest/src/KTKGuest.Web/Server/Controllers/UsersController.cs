@@ -1,4 +1,5 @@
-﻿using KTKGuest.WebComponents.Data;
+﻿using KTKGuest.Server.Helpers;
+using KTKGuest.WebComponents.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
@@ -41,7 +42,7 @@ public class UsersController : ControllerBase
 
                 string query;
 
-                query = "SELECT id, login, pass, (SELECT title FROM roles WHERE id = role_id) as role FROM users; ";
+                query = "SELECT id, login, (SELECT title FROM roles WHERE id = role_id) as role FROM users; ";
 
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
@@ -56,7 +57,6 @@ public class UsersController : ControllerBase
                 {
                     Id = (int)row["id"],
                     Login = (string)row["login"],
-                    Password = (string)row["pass"],
                     Role = (string)row["role"]
                 });
             }
@@ -120,8 +120,8 @@ public class UsersController : ControllerBase
 
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@login", postForm["login"]);
-                    cmd.Parameters.AddWithValue("@pass", postForm["password"]);
+                    cmd.Parameters.AddWithValue("@login", postForm["login"].ToLower());
+                    cmd.Parameters.AddWithValue("@pass", HashPasswordHelper.HashPassword(postForm["password"]));
 
                     NpgsqlDataReader dataReader = cmd.ExecuteReader();
                     dt.Load(dataReader);
@@ -166,6 +166,7 @@ public class UsersController : ControllerBase
     public IActionResult Add([FromForm] Dictionary<string, string> postForm)
     {
         var response = new APIResponse();
+        var dt = new DataTable();
 
         try
         {
@@ -209,6 +210,26 @@ public class UsersController : ControllerBase
 
                 string query;
 
+                query = "SELECT login " +
+                        "FROM users " +
+                        "WHERE login = @login;";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@login", userDetails.Login.ToLower());
+
+                    NpgsqlDataReader dataReader = cmd.ExecuteReader();
+                    dt.Load(dataReader);
+                }
+
+                if (dt.Rows.Count != 0)
+                {
+                    response.Result = false;
+                    response.Message = "Такой логин уже существует";
+
+                    return BadRequest(response);
+                }
+
                 query = "INSERT INTO users " +
                         "( " +
                         "   login, " +
@@ -224,8 +245,8 @@ public class UsersController : ControllerBase
 
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@login", userDetails.Login);
-                    cmd.Parameters.AddWithValue("@pass", userDetails.Password);
+                    cmd.Parameters.AddWithValue("@login", userDetails.Login.ToLower());
+                    cmd.Parameters.AddWithValue("@pass", HashPasswordHelper.HashPassword(userDetails.Password));
                     cmd.Parameters.AddWithValue("@role", userDetails.Role);
 
                     cmd.ExecuteNonQuery();
@@ -241,7 +262,7 @@ public class UsersController : ControllerBase
             }
 
             response.Result = true;
-            response.Message = $"Пользователь под логином {userDetails.Login} успешно добавлен!";
+            response.Message = $"Пользователь под логином {userDetails.Login.ToLower()} успешно добавлен!";
 
             return Ok(response);
         }
@@ -320,8 +341,8 @@ public class UsersController : ControllerBase
 
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@login", userDetails.Login);
-                    cmd.Parameters.AddWithValue("@pass", userDetails.Password);
+                    cmd.Parameters.AddWithValue("@login", userDetails.Login.ToLower());
+                    cmd.Parameters.AddWithValue("@pass", HashPasswordHelper.HashPassword(userDetails.Password));
                     cmd.Parameters.AddWithValue("@role", userDetails.Role);
                     cmd.Parameters.AddWithValue("@id", userDetails.Id);
 
@@ -406,7 +427,7 @@ public class UsersController : ControllerBase
             }
 
             response.Result = true;
-            response.Message = $"Пользователь под логином {userDetails.Login} успешно удален!";
+            response.Message = $"Пользователь успешно удален!";
 
             return Ok(response);
         }

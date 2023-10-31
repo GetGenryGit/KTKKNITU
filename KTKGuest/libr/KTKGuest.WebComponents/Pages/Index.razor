@@ -30,7 +30,7 @@ else
             <option value="Кабинеты">Кабинеты</option>
         </select>
 
-        <input class="sel-value" id="value" type="search" @bind="SelectedValue" @onclick="NavigateSelectValue" readonly />
+        <input class="sel-value" id="value" type="button" @bind="SelectedValue" @onclick="NavigateSelectValue" readonly />
         @if (SelectedValue != "Не выбрано")
         {
             <div class="clear-value" @onclick=" async () => await ClearValue()">

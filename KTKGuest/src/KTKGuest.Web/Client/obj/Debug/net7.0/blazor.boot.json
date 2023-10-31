@@ -200,14 +200,14 @@
       "mscorlib.dll": "sha256-Xo3wdLenBZ41X73hGjkWTbEQZDKcQsnPFtlkePUxLY0=",
       "netstandard.dll": "sha256-qjqaAEP3hdLnU\/TnoCd8HaSa+0ruV1TpdaB2GUujGMw=",
       "System.Private.CoreLib.dll": "sha256-\/7uQ+eNo9u3H1mpgMko4D3tKZHeGRfsRjna0Dqsu62k=",
-      "KTKGuest.WebComponents.dll": "sha256-NRDskRPQ7T+qOTOHAbb0bLx+qaINNikqNIf1DAYlzTM=",
+      "KTKGuest.WebComponents.dll": "sha256-eul\/qyYnjpep+3TCUtaJPXv3EGFOzLY18zWQjpP6fWY=",
       "KTKGuest.Web.Client.dll": "sha256-PC+cEu77lxaek3+CA6r1oj5nQnVnF03tGa\/GRgOQ3dY="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "KTKGuest.WebComponents.pdb": "sha256-DjRQU5IisW+oz9cVaVzxeHGV7vyqkUL04xOucb+4pZM=",
+      "KTKGuest.WebComponents.pdb": "sha256-JAqXct9XuDk\/JuPMubSB3KLt4YpLRrC5KaoMMesjCus=",
       "KTKGuest.Web.Client.pdb": "sha256-kgL40krlSMkivrmFTMGHLvbAWjohFtpCCn0gy+elLW8="
     },
     "runtime": {

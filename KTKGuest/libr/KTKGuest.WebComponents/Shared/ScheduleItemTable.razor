@@ -51,7 +51,15 @@
                                             {
                                                 <p>@item.Title3</p>
                                             }
-                                            <b>@item.Title2</b>
+
+                                            @if (item.Title2 == "-")
+                                            {
+                                                <b>Дистанционное обучение</b>
+                                            }
+                                            else
+                                            {
+                                                <b>@item.Title2</b>
+                                            }
                                         </span>
                                     </div>
                                 }
@@ -77,7 +85,15 @@
                                                 {
                                                     <p>@item.Title3</p>
                                                 }
-                                                <b>@item.Title2</b>
+
+                                                @if (item.Title2 == "-")
+                                                {
+                                                    <b>Дистанционное обучение</b>
+                                                }
+                                                else
+                                                {
+                                                    <b>@item.Title2</b>
+                                                }
 
                                             </span>
                                         </div>
@@ -107,7 +123,15 @@
                                                 {
                                                     <p>@item.Title3</p>
                                                 }
-                                                <b>@item.Title2</b>
+
+                                                @if (item.Title2 == "-")
+                                                {
+                                                    <b>Дистанционное обучение</b>
+                                                }
+                                                else
+                                                {
+                                                    <b>@item.Title2</b>
+                                                }
                                             </span>
                                         </div>
                                     }
