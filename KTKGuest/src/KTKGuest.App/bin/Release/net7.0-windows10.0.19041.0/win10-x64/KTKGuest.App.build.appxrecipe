@@ -15,7 +15,7 @@
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath></WindowsSdkPath>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
@@ -33,6 +33,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>KTKGuest.App.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\google-services.json">
+      <PackagePath>google-services.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-windows10.0.19041.0\win10-x64\KTKGuest.App.deps.json">
       <PackagePath>KTKGuest.App.deps.json</PackagePath>
@@ -720,6 +723,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\Plugin.Firebase.dll">
+      <PackagePath>Plugin.Firebase.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>

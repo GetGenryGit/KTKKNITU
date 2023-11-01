@@ -19,7 +19,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyTitleAttribute("KTKGuest.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("iOS16.1")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("iOS14.2")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("iOS16.1")]
 
 // Создано классом WriteCodeFragment MSBuild.
 

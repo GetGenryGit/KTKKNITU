@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1016017184812",
+    "project_id": "colledgeschedule",
+    "storage_bucket": "colledgeschedule.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016017184812:android:f7b588b043a0cefe2d8989",
+        "android_client_info": {
+          "package_name": "ru.com.ilyaoleynik.ktkguest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016017184812-okedjm9p5e0l48aontm58qhg8bh1qlsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6qI4SfMyCHM5U3pAzGllJmC7mS7gTMoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016017184812-okedjm9p5e0l48aontm58qhg8bh1qlsc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
