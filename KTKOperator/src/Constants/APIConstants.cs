@@ -26,4 +26,6 @@ public class APIConstants
     public static string DeleteUser = Url + "api/users/delete_by_id";
 
     public static string GetLogs = Url + "api/logs/get";
+
+    public static string NotificationSend = Url + "api/notifications/send";
 }

@@ -39,14 +39,8 @@ public class ScheduleVM : IScheduleVM
     private DateTime selectedDate = DateTime.Now;
     public DateTime SelectedDate 
     {
-        get
-        {
-            return selectedDate;
-        }
-        set
-        {
-            selectedDate = value;
-        }
+        get => selectedDate;
+        set => selectedDate = value == DateTime.MinValue ? DateTime.Now : value;
     }
 
     private ScheduleGet scheduleList = new ScheduleGet();
@@ -55,7 +49,6 @@ public class ScheduleVM : IScheduleVM
         get => scheduleList; 
         set => scheduleList = value; 
     }
-    public string test { get; set; }
     #endregion
 
     #region [SecondoryMethods]
@@ -86,6 +79,18 @@ public class ScheduleVM : IScheduleVM
         return await httpService.POST(APIConstants.ScheduleAdd, postDataSchedule);
 
     } // API CALL Upload Schedule BY DATE
+
+    private async Task<APIResponse> SendNotification(string title, string body)
+    {
+        var postDataSchedule = new Dictionary<string, string>
+        {
+            /*{ "API_KEY", APIConstants.token },*/
+                { "title",  title },
+                { "body",  body }
+            };
+
+        return await httpService.POST(APIConstants.NotificationSend, postDataSchedule);
+    }
     private string ConvertForSending(ScheduleGet schedule)
     {
         var sendList = new List<ScheduleItem>();
@@ -176,7 +181,7 @@ public class ScheduleVM : IScheduleVM
             {
                 bool result = await displayAlertService.DisplayDialog(
                     "Удаление расписания",
-                    $"Вы уверены что хотите сбросить расписание за {SelectedDate.ToString("dd.MM.yyyy")}",
+                    $"Вы уверены что хотите сбросить расписание за {SelectedDate.ToString("dd.MM.yyyy")}, в будущем его нельзя будет вернуть!",
                      "Да", "Нет");
 
                 if (!result)
@@ -193,6 +198,27 @@ public class ScheduleVM : IScheduleVM
                         "Удаление расписания",
                         $"Расписание за {SelectedDate.ToString("dd.MM.yyyy")} успешно сброшено",
                          "OK");
+
+                    APIResponse responseNotifyDelete = await SendNotification
+                    (
+                        "Изменения в расписание!",
+                        $"Расписание за {SelectedDate.ToString("dd.MM.yyyy")} было сброшено!"
+                    );
+
+                    if (responseNotifyDelete.Result) 
+                    {
+                        await displayAlertService.DisplayMessage(
+                            "Уведомление успешно отправлено",
+                            $"{responseNotifyDelete.Message}",
+                            "OK");
+                    }
+                    else
+                    {
+                        await displayAlertService.DisplayMessage(
+                            "Не удалось отправить уведомление пользователю",
+                            $"{responseNotifyDelete.Message}",
+                            "OK");
+                    }
                 }
                 else
                 {
@@ -218,14 +244,33 @@ public class ScheduleVM : IScheduleVM
 
                 APIResponse responseSending = await UploadSchedule(SelectedDate, ScheduleList);
 
-                test = JsonSerializer.Serialize(ScheduleList);
-
                 if (responseSending.Result)
                 {
                     await displayAlertService.DisplayMessage(
                         "Публикация расписания",
                        $"Расписание за {SelectedDate.ToString("dd.MM.yyyy")} успешно опубликованно",
                         "OK");
+
+                    APIResponse responseNotifyPublished = await SendNotification
+                    (
+                        "Опубликованно расписание!",
+                        $"Расписание опубликованно за {SelectedDate.ToString("dd.MM.yyyy")}!"
+                    );
+
+                    if (responseNotifyPublished.Result)
+                    {
+                        await displayAlertService.DisplayMessage(
+                            "Уведомление успешно отправлено",
+                            $"{responseNotifyPublished.Message}",
+                            "OK");
+                    }
+                    else
+                    {
+                        await displayAlertService.DisplayMessage(
+                            "Не удалось отправить уведомление пользователю",
+                            $"{responseNotifyPublished.Message}",
+                            "OK");
+                    }
                 }
                 else
                 {

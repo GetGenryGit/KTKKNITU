@@ -171,3 +171,13 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Debug\net7.0\KTKGue
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Debug\net7.0\KTKGuest.Web.Server.genruntimeconfig.cache
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\obj\Debug\net7.0\ref\KTKGuest.Web.Server.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Blazored.SessionStorage.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\private_key_firebase.json
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\FirebaseAdmin.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Google.Api.Gax.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Google.Api.Gax.Rest.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Google.Apis.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Google.Apis.Auth.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Google.Apis.Core.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.Web\Server\bin\Debug\net7.0\Newtonsoft.Json.dll

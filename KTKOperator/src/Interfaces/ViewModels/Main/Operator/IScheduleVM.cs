@@ -7,7 +7,6 @@ public interface IScheduleVM
 {
     NavigationManager navigationService { get; set; }
     bool IsLoading { get; set; }
-    string test { get; set; }
     DateTime SelectedDate { get; set; }
     ScheduleGet ScheduleList { get; set; }
     private void LoadingChange(bool state)
