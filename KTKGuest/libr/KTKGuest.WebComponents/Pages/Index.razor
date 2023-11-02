@@ -171,18 +171,17 @@ else
                     {
                         foreach (var lesson in lessonsIndexList)
                         {
-                            if (lesson.SubGroup == 0)
-                            {
+
                                 var lessonItem = new ItemObj
                                 {   
                                     Title1 = lesson.Collective,
                                     Title2 = lesson.Classroom,
                                     Title3 = lesson.Subject,
-                                    SubGroup = lesson.SubGroup,
+                                    SubGroup = 0,
                                 };  
 
                                 lessonContainer.Items.Add(lessonItem);
-                            }
+
                         }
                     }
                     else
@@ -212,17 +211,16 @@ else
                         {
                             foreach (var lesson in lessonsIndexList)
                             {
-                                if (lesson.SubGroup == 0)
-                                {
+
                                     var lessonItem = new ItemObj
                                     {
                                         Title1 = lesson.Collective,
                                         Title2 = lesson.Classroom,
                                         Title3 = lesson.Subject,
-                                        SubGroup = lesson.SubGroup,
+                                        SubGroup = 0,
                                     };
                                     lessonContainer.Items.Add(lessonItem);
-                                }
+                                
                             }
                         }
                         else
@@ -328,18 +326,17 @@ else
                     {
                         foreach (var lesson in lessonsIndexList)
                         {
-                            if (lesson.SubGroup == 0)
-                            {
+                            
                                 var lessonItem = new ItemObj
                                 {
                                     Title1 = lesson.Teacher,
                                     Title2 = lesson.Collective,
                                     Title3 = lesson.Subject,
-                                    SubGroup = lesson.SubGroup,
+                                    SubGroup = 0,
                                 };
 
                                 lessonContainer.Items.Add(lessonItem);   
-                            }
+                            
                         }
                     }
                     else
@@ -368,18 +365,17 @@ else
                         {
                             foreach (var lesson in lessonsIndexList)
                             {
-                                if (lesson.SubGroup == 0)
-                                {
+                                
                                     var lessonItem = new ItemObj
                                     {
                                         Title1 = lesson.Teacher,
                                         Title2 = lesson.Collective,
                                         Title3 = lesson.Subject,
-                                        SubGroup = lesson.SubGroup,
+                                        SubGroup = 0,
                                     };
 
                                     lessonContainer.Items.Add(lessonItem);   
-                                }
+                                
                             }
                         }
                         else

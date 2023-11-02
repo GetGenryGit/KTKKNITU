@@ -270,3 +270,4 @@ C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-maccatalyst
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\obj\Release\net7.0-maccatalyst\maccatalyst-arm64\ref\KTKGuest.App.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-maccatalyst\maccatalyst-arm64\Blazored.SessionStorage.dll
 C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-maccatalyst\maccatalyst-arm64\Plugin.Firebase.dll
+C:\Users\ilyao\KTKKNITU\KTKGuest\src\KTKGuest.App\bin\Release\net7.0-maccatalyst\maccatalyst-arm64\google-services.json

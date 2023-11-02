@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {},
     ".NETCoreApp,Version=v7.0/win10-x64": {
-      "KTKGuest.App/1.0": {
+      "KTKGuest.App/1.0.1": {
         "dependencies": {
           "KTKGuest.WebComponents": "1.0.0",
           "Microsoft.AspNetCore.Components.WebView.Maui": "7.0.92",
@@ -1252,7 +1252,7 @@
     }
   },
   "libraries": {
-    "KTKGuest.App/1.0": {
+    "KTKGuest.App/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
