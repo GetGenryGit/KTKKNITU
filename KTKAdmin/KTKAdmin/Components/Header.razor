@@ -1,0 +1,29 @@
+﻿@using KTKAdmin.Abstracts.ViewModels.Layouts;
+@using Microsoft.AspNetCore.Components.Authorization
+
+@inject IMainLayoutVM vm 
+
+<ViewModelRegion ViewModel="vm">
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle" @onclick="() => vm.ChangeNavBarState()"></i>
+
+        <div class="user-info">
+            <p>
+                <AuthorizeView>
+                    <Authorized>
+                        <span>@context.User.Identity!.Name</span><br />
+                        @if (context.User.IsInRole("А.П."))
+                        {
+                            <span class="text-muted">А.П.</span>
+                        }
+                        else if (context.User.IsInRole("О.Р."))
+                        {
+                            <span class="text-muted">О.Р.</span>
+                        }
+                    </Authorized>
+                </AuthorizeView>
+            </p>
+            <i class="uil uil-user-circle" style="font-size: 32px;"></i>
+        </div>
+    </div>
+</ViewModelRegion>

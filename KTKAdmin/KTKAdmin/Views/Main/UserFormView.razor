@@ -1,0 +1,58 @@
+﻿@page "/user_form/{Type}"
+
+@using KTKAdmin.Abstracts.ViewModels.Main
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize(Roles = "А.П.")]
+
+@inject IUserFormVM vm
+
+@layout MainLayout
+
+<div class="prerender-page">
+    <div class="return-icon" @onclick="() => vm.NavigateBack()">
+        <i class="uil uil-arrow-left"></i>
+        <span>Вернуться</span>
+    </div>
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-user"></i>            
+            <span class="text">@Type</span>
+        </div>
+    </div>
+
+    <div class="sign-in-form">
+        <div class="input-field">
+            <i class="uil uil-user-circle"></i>
+            <input type="text" placeholder="Логин" @bind="vm.UserInf.Login" />
+        </div>
+
+        <div class="input-field">
+            <i class="uil uil-key-skeleton"></i>
+            <input type="password" placeholder="Пароль" @bind="vm.UserInf.Password" />
+        </div>
+
+        <div class="select-box">
+            <select @bind="vm.UserInf.Role">
+                <option value="Выберите привелегию">Выберите привелегию</option>
+                <option value="О.Р.">Оператор расписания</option>
+                <option value="А.П.">Админ приложения</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="btn-container">
+
+        @if (Type.Contains("Редактирование пользователя"))
+        {
+            <button class="btn btn-clear-table" @onclick="async () => await vm.Delete(vm.UserInf)">Удалить пользователя</button>
+        }
+
+        <button class="btn btn-publish-schedule" @onclick="async () => await vm.Save(vm.UserInf)">Сохранить пользователя</button>
+    </div>
+
+</div>
+
+@code{
+    [Parameter] public string Type { get; set; }
+}

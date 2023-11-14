@@ -1,0 +1,70 @@
+﻿@page "/main/schedules"
+@using KTKAdmin.Abstracts.ViewModels.Main
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize(Roles = "А.П., О.Р.")]
+
+@inject ISchedulePublisherVM vm
+
+@layout MainLayout
+
+<div class="prerender-page">
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-schedule"></i>
+            <span class="text">Публикация расписания</span>
+        </div>
+        
+        <div class="date" disabled="@vm.IsBusy.ToString()">
+            <input type="date" @bind="vm.SelectedDate" @bind:after="() => vm.ClearDataTable()" required>
+            <h3>Групп в таблице: @vm.ScheduleDetails.scheduleObjList.ScheduleItems.Count</h3>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">Группа</th>
+                        <th style="text-align: right;">Детали</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (vm.IsBusy)
+                    {
+                        <tr>
+                            <td colspan="2" class="loading">
+                                <div class="spinner"></div>
+                            </td>
+                        </tr>     
+                    }
+                    else
+                    {
+                        foreach (var item in vm.ScheduleDetails.scheduleObjList.ScheduleItems)
+                        {
+                            <tr>
+                                <td style="text-align: left;">@item.Title</td>
+                                <td><i class="uil uil-info-circle" style="cursor: pointer;" @onclick="() => vm.ShowSchedule(item)"></i></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="btn-container" disabled="@vm.IsBusy.ToString()">
+            <button class="btn btn-upload-xlsx" @onclick="async () => await vm.RecieveDataFromExcel()"><i class="uil uil-file-upload-alt"></i>Загрузить xlsx</button>
+            <button class="btn btn-clear-table" @onclick="() => vm.ClearDataTable()"><i class="uil uil-trash"></i>Очистить таблицу</button>
+            <button class="btn btn-publish-schedule" @onclick="async () => await vm.UploadDataTable()"><i class="uil uil-upload"></i>Опубликовать</button>
+        </div>
+
+    </div>
+</div>
+
+
+@code {
+    protected override void OnInitialized()
+        => vm.OnInitVM();
+
+    protected override async Task OnInitializedAsync()
+        => await vm.OnInitVMAsync();
+}

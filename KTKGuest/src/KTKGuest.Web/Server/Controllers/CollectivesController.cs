@@ -73,6 +73,62 @@ public class CollectivesController : ControllerBase
 
     }
 
+    //GET: api/collectives/get_all
+    [HttpGet]
+    [Route("get_all")]
+    public IActionResult GetAll()
+    {
+        var response = new APIResponse();
+        var dt = new DataTable();
+
+        var list = new List<DictionaryItem>();
+
+        try
+        {
+            using (var conn = new NpgsqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT id, title, status " +
+                               "FROM collectives " +
+                               "ORDER BY id ASC; ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    NpgsqlDataReader dataReader = cmd.ExecuteReader();
+                    dt.Load(dataReader);
+                }
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    list.Add(new DictionaryItem
+                    {
+                        Id = (int)row["id"],
+                        Title = (string)row["title"],
+                        Status = (bool)row["status"]
+                    });
+                }
+            }
+
+            response.Result = true;
+            response.Message = "Справочники активных и неактивных групп успешно получены!";
+
+            response.obj = list;
+
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            response.Result = false;
+#if DEBUG
+            response.Message = ex.Message;
+#else
+            response.Message = "Произошла ошибка на стороне сервера, при получение справочников активных и неактивных групп!";
+#endif
+            return BadRequest(response);
+        }
+    }
+
     // POST: api/collectives/send
     [HttpPost]
     [Route("[action]")]

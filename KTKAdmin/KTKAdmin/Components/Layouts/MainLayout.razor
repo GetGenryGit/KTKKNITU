@@ -1,0 +1,30 @@
+﻿@using KTKAdmin.Abstracts.ViewModels.Layouts;
+@using Microsoft.AspNetCore.Components.Authorization;
+@inherits LayoutComponentBase
+
+@inject IMainLayoutVM vm
+
+<ViewModelRegion ViewModel="vm">
+    <body class="@vm.ThemeState">
+        <NavBar />
+
+        <section class="dashboard">
+           <Header/>
+
+            <div class="dash-content">
+                @Body
+            </div>
+        </section>
+    </body>
+
+</ViewModelRegion>
+
+@code{
+    protected override void OnInitialized()
+        => vm.OnInitVM();
+
+    protected override async Task OnInitializedAsync()
+        => await vm.OnInitVMAsync();
+
+}
+

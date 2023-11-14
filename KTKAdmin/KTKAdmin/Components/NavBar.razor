@@ -1,0 +1,78 @@
+﻿@using KTKAdmin.Abstracts.ViewModels.Layouts;
+@using Microsoft.AspNetCore.Components.Authorization
+
+@inject IMainLayoutVM vm
+
+
+<ViewModelRegion ViewModel="@vm">
+    <nav class="@vm.NavBarState">
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="img/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">КТК АДМИН</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <AuthorizeView Roles="О.Р., А.П.">
+                    <Authorized>
+                        <li>
+                            <NavLink href="/main/dictionaries">
+                                <i class="uil uil-book"></i>
+                                <span class="link-name">Справочники</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink href="/main/schedules">
+                                <i class="uil uil-schedule"></i>
+                                <span class="link-name">Расписание</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink href="/main/logs_for_schedules">
+                                <i class="uil uil-file-question-alt"></i>
+                                <span class="link-name">Логи расписания</span>
+                            </NavLink>
+                        </li>
+                    </Authorized>
+                </AuthorizeView>
+                <AuthorizeView Roles="А.П.">
+                    <Authorized>
+                        <li>
+                            <NavLink href="/main/users_panel">
+                                <i class="uil uil-user-arrows"></i>
+                                <span class="link-name">Управления пользователями</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink href="/main/users_logs">
+                                <i class="uil uil-file-check-alt"></i>
+                                <span class="link-name">Логи действий</span>
+                            </NavLink>
+                        </li>
+                    </Authorized>
+                </AuthorizeView>
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a style="cursor: pointer;" @onclick="() => vm.SignOut()">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Выйти</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <a>
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Темная тема</span>
+                    </a>
+                    <div class="mode-toggle">
+                        <span class="switch" @onclick="async () => await vm.ChangeThemeState()"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</ViewModelRegion>

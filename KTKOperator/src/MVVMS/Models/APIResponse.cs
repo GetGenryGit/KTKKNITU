@@ -10,5 +10,4 @@ public class APIResponse
     public string Message { get; set; }
     [JsonPropertyName("obj")]
     public object Obj { get; set; }
-
 }

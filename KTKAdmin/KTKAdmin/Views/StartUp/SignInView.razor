@@ -1,0 +1,42 @@
+﻿@page "/"
+
+@using KTKAdmin.Abstracts.ViewModels.StartUp
+@inject ISignInVM vm
+
+@layout EmptyLayout
+
+@if (vm.IsBusy)
+{
+    <div class="spinner-container">
+        <div class="spinner"></div>
+    </div>
+}
+else
+{
+    <div class="container-login">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <div class="signin-container sign-in-form">
+                    <img src="img/logo.png" alt="" />
+                    <h2 class="title">Авторизация</h2>
+                    <div class="input-field">
+                        <i class="uil uil-user-circle"></i>
+                        <input type="text" placeholder="Логин" @bind="vm.LoginInput" />
+                    </div>
+                    <div class="input-field">
+                        <i class="uil uil-key-skeleton"></i>
+                        <input type="password" placeholder="Пароль" @bind="vm.PasswordInput" />
+                    </div>
+                    <button class="btn-login" @onclick="async () => await vm.SignIn()">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    protected override async Task OnInitializedAsync()
+        => await vm.OnInitVMAsync();
+    
+
+}

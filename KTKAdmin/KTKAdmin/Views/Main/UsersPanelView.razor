@@ -1,0 +1,64 @@
+﻿@page "/main/users_panel"
+@using KTKAdmin.Abstracts.ViewModels.Main;
+@using KTKAdmin.ViewModels.Main
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize(Roles = "А.П.")]
+
+@inject IUsersPanelVM vm
+
+@layout MainLayout
+
+<div class="prerender-page">
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-user-arrows"></i>
+            <span class="text">Управление пользователями</span>
+        </div>
+    </div>
+
+    <div class="table-container logs-table">
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align: left;">Логин</th>
+                    <th style="text-align: right;">Роль</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (vm.IsBusy)
+                {
+                    <tr>
+                        <td colspan="2" class="loading">
+                            <div class="spinner"></div>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var item in vm.UsersList)
+                    {
+                        <tr @onclick="() => vm.EditUser(item)">
+                            <td style="text-align: left;">@item.Login</td>
+                            <td>@item.Role</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn btn-refresh" @onclick="() => vm.RefreshUsersList()"><i class="uil uil-refresh"></i></button>
+        <button class="btn btn-create-user" @onclick="() => vm.CreateUser()">Создать пользователя</button>
+
+    </div>
+</div>
+
+@code {
+    protected override void OnInitialized()
+        => vm.OnInitVM();
+
+    protected override Task OnInitializedAsync()
+        => vm.OnInitVMAsync();
+}

@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ilyao\\KTKKNITU\\KTKAdmin\\KTKAdmin\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\ilyao\\KTKKNITU\\KTKAdmin\\KTKAdmin\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\ilyao\\KTKKNITU\\KTKAdmin\\KTKAdmin\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ilyao\\KTKKNITU\\KTKAdmin\\KTKAdmin\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ilyao\\KTKKNITU\\KTKAdmin\\KTKAdmin\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-android\\staticwebassets\\msbuild.KTKAdmin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-android\\staticwebassets\\msbuild.build.KTKAdmin.props",
+      "PackagePath": "build\\KTKAdmin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-android\\staticwebassets\\msbuild.buildMultiTargeting.KTKAdmin.props",
+      "PackagePath": "buildMultiTargeting\\KTKAdmin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-android\\staticwebassets\\msbuild.buildTransitive.KTKAdmin.props",
+      "PackagePath": "buildTransitive\\KTKAdmin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

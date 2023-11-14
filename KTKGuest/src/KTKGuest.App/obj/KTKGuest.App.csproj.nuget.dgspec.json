@@ -408,10 +408,6 @@
               "version": "[7.0.10, 7.0.10]"
             },
             {
-              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-              "version": "[7.0.10, 7.0.10]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
               "version": "[7.0.10, 7.0.10]"
             },
@@ -455,9 +451,6 @@
           "#import": []
         },
         "android-x86": {
-          "#import": []
-        },
-        "maccatalyst-arm64": {
           "#import": []
         },
         "maccatalyst-x64": {

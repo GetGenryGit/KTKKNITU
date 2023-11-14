@@ -1,0 +1,172 @@
+﻿@page "/schedule_collective"
+
+@using KTKAdmin.Abstracts.ViewModels.Main
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize(Roles = "А.П., О.Р.")]
+
+@inject IScheduleCollectiveItemVM vm
+
+@layout MainLayout
+
+<div class="prerender-page">
+    <div class="return-icon" @onclick="() => vm.NavigateBack()">
+        <i class="uil uil-arrow-left"></i>
+        <span>Вернуться</span>
+    </div>
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-user"></i>
+            <span class="text">Просмотр расписания для группы</span>
+        </div>
+        <div class="container-schedule-firstly">
+            <div class="collective-schedule">
+                <section>
+                    @if (vm.SelectedItem.Title.Length > 20)
+                    {
+                        <h1>@vm.SelectedItem.Title.Substring(0,20)...</h1>
+                    }
+                    else
+                    {
+                        <h1>@vm.SelectedItem.Title</h1>
+                    }
+                    <div>
+                        @foreach (var lesson in vm.SelectedItem.LessonItems)
+                        {
+                            <div>
+                                <p>@lesson.Index</p>
+                                <div>
+                                    <span>
+                                        @lesson.StartAt.ToString(@"hh\:mm")
+                                        @lesson.EndAt.ToString(@"hh\:mm")
+                                    </span>
+                                    <main>
+                                        @if (lesson.Items.Count == 0)
+                                        {
+                                            <p>Нет занятий</p>
+                                        }
+                                        else
+                                        {
+                                            foreach (var item in lesson.Items)
+                                            {
+                                                if (item.SubGroup == 0)
+                                                {
+                                                    <div>
+                                                        <span>
+                                                            @if (@item.Title1.Length > 30)
+                                                            {
+                                                                <p>@item.Title1.Substring(0, 30)...</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p>@item.Title1</p>
+                                                            }
+                                                            @if (@item.Title3.Length > 30)
+                                                            {
+                                                                <p>@item.Title3.Substring(0, 30)...</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p>@item.Title3</p>
+                                                            }
+
+                                                            @if (item.Title2 == "-")
+                                                            {
+                                                                <b>Дистанционное обучение</b>
+                                                            }
+                                                            else
+                                                            {
+                                                                <b>@item.Title2</b>
+                                                            }
+                                                        </span>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    if (item.SubGroup == 1)
+                                                    {
+                                                        <div>
+                                                            <span>
+                                                                @if (item.Title1.Length > 13)
+                                                                {
+                                                                    <p>@item.Title1.Substring(0, 13)...</p>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <p>@item.Title1</p>
+                                                                }
+                                                                @if (item.Title3.Length > 13)
+                                                                {
+                                                                    <p>@item.Title3.Substring(0, 13)...</p>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <p>@item.Title3</p>
+                                                                }
+
+                                                                @if (item.Title2 == "-")
+                                                                {
+                                                                    <b>Дистанционное обучение</b>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <b>@item.Title2</b>
+                                                                }
+
+                                                            </span>
+                                                        </div>
+                                                    }
+                                                    else if (!lesson.Items.Exists(s => s.SubGroup == 1))
+                                                    {
+                                                        <p style="background: lightgray;margin: 29px 30px 29px 0px;"></p>
+                                                    }
+
+                                                    if (item.SubGroup == 2)
+                                                    {
+                                                        <div>
+                                                            <span>
+                                                                @if (item.Title1.Length > 13)
+                                                                {
+                                                                    <p>@item.Title1.Substring(0, 13)...</p>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <p>@item.Title1</p>
+                                                                }
+                                                                @if (item.Title3.Length > 13)
+                                                                {
+                                                                    <p>@item.Title3.Substring(0, 13)...</p>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <p>@item.Title3</p>
+                                                                }
+
+                                                                @if (item.Title2 == "-")
+                                                                {
+                                                                    <b>Дистанционное обучение</b>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <b>@item.Title2</b>
+                                                                }
+                                                            </span>
+                                                        </div>
+                                                    }
+                                                    else if (!lesson.Items.Exists(s => s.SubGroup == 2))
+                                                    {
+                                                        <p style="background: lightgray;margin: 29px 30px 29px 0px;"></p>
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    </main>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

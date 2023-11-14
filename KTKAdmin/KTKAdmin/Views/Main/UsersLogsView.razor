@@ -1,0 +1,60 @@
+﻿@page "/main/users_logs"
+
+@using KTKAdmin.Abstracts.ViewModels.Main;
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize(Roles = "А.П.")]
+
+
+@inject IUsersLogsVM vm
+
+@layout MainLayout
+
+<div class="prerender-page">
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-file-check-alt"></i>
+            <span class="text">Логи действий пользователей</span>
+        </div>
+    </div>
+
+    <div class="table-container logs-table">
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align: left;">Событие</th>
+                    <th style="text-align: right;">Дата/Время</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (vm.IsBusy)
+                {
+                    <tr>
+                        <td colspan="2" class="loading">
+                            <div class="spinner"></div>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var item in vm.HistoryList)
+                    {
+                        <tr>
+                            <td style="text-align: left;">@item.EventDescribe</td>
+                            <td>@item.DateCreated.ToString("dd.MM.yyyy HH:mm")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-container" disabled="@vm.IsBusy.ToString()">
+        <button class="btn btn-sync-dictionories" @onclick="async () => await vm.UpdateLogs()"><i class="uil uil-refresh"></i></button>
+    </div>
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+        => await vm.OnInitVMAsync();
+}

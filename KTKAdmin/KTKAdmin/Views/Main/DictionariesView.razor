@@ -1,0 +1,112 @@
+﻿@page "/main/dictionaries"
+@using KTKAdmin.Abstracts.ViewModels.Main;
+@using Microsoft.AspNetCore.Authorization;
+
+@attribute [Authorize(Roles = "А.П., О.Р.")]
+
+@inject IDictionariesVM vm
+
+@layout MainLayout
+
+<div class="prerender-page">
+    <div class="overview">
+        <div class="title">
+            <i class="uil uil-book"></i>
+            <span class="text">Синхронизация справочников</span>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <h3>Выбор файла</h3>
+                    <div class="drop_box" @onclick="async () => await vm.SelectPath()">
+                    @if (vm.IsBusy)
+                    {
+                        <p>
+                            <div class="spinner"></div>
+                        </p>
+                    }
+                    else
+                    {
+                        @if (string.IsNullOrWhiteSpace(vm.PathFull))
+                        {
+                            <p>Нажмите для выбора файла базы данных .mdb</p>
+                        }
+                        else
+                        {
+                            <p>@vm.PathFull</p>
+                        }
+                    }
+                    </div>
+
+                <div disabled="@vm.IsBusy.ToString()">
+                    <button class="btn btn-sync-dictionories" @onclick="async () => await vm.SyncDictionary()">Синхронизировать справочник</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="title">
+            <i class="uil uil-book"></i>
+            <span class="text">Подробно о справочниках</span>
+        </div>
+        <div class="boxes">
+            <div class="box box1">
+                <i class="uil uil-backpack"></i>
+                <span class="text">Активных групп</span>
+                @if (vm.IsBusy)
+                {
+                    <span class="number"><div class="spinner"></div></span>
+                }
+                else
+                {
+                    <span class="number">@vm.CollectivesList.Where(i => i.Status).ToList().Count/@vm.CollectivesList.Count</span>
+                }
+            </div>
+            <div class="box box2">
+                <i class="uil uil-users-alt"></i>
+                <span class="text">Активных учителей</span>
+                @if (vm.IsBusy)
+                {
+                    <span class="number"><div class="spinner"></div></span>
+                }
+                else
+                {
+                    <span class="number">@vm.TeachersList.Where(i => i.Status).ToList().Count/@vm.TeachersList.Count</span>
+                }
+            </div>
+            <div class="box box3">
+                <i class="uil uil-subject"></i>
+                <span class="text">Активных дисциплин</span>
+                @if (vm.IsBusy)
+                {
+                    <span class="number"><div class="spinner"></div></span>
+                }
+                else
+                {
+                    <span class="number">@vm.SubjectsList.Where(i => i.Status == true).ToList().Count/@vm.SubjectsList.Count</span>
+                }
+            </div>
+            <div class="box box4">
+                <i class="uil uil-notebooks"></i>
+                <span class="text">Активных кабинетов</span>
+                @if (vm.IsBusy)
+                {
+                    <span class="number"><div class="spinner"></div></span>
+                }
+                else
+                {
+                    <span class="number">@vm.ClassroomsList.Where(i => i.Status == true).ToList().Count/@vm.ClassroomsList.Count</span>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+        => await vm.OnInitVMAsync();
+
+}

@@ -1,0 +1,1 @@
+C:\Users\ilyao\KTKKNITU\KTKAdmin\KTKAdmin\KTKAdmin.csproj;x64

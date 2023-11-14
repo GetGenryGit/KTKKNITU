@@ -1,0 +1,21 @@
+﻿@inherits LayoutComponentBase
+
+@inject ILocalStorageService localStorage
+
+<body class="@themeState">
+    @Body
+</body>
+
+@code{
+    private string themeState = string.Empty;
+    private const string darkTheme = "dark";
+
+    protected override async Task OnInitializedAsync()
+    {
+        string themeTmp = await localStorage.GetItemAsStringAsync("theme");
+
+        themeState = themeTmp == "dark"
+            ? themeState = darkTheme
+            : themeState = string.Empty;
+    }
+}
