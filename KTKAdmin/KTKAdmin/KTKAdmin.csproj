@@ -13,7 +13,7 @@
         <EnableDefaultCssItems>false</EnableDefaultCssItems>
 
         <!-- Display name -->
-        <ApplicationTitle>KTKAdmin</ApplicationTitle>
+        <ApplicationTitle>АДМИН_КТК</ApplicationTitle>
 
         <!-- App Identifier -->
         <ApplicationId>com.companyname.ktkadmin</ApplicationId>

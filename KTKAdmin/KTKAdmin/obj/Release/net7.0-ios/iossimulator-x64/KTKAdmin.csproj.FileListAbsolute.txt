@@ -305,6 +305,5 @@ C:\Users\ilyao\KTKKNITU\KTKAdmin\KTKAdmin\bin\Release\net7.0-ios\iossimulator-x6
 C:\Users\ilyao\KTKKNITU\KTKAdmin\KTKAdmin\bin\Release\net7.0-ios\iossimulator-x64\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ilyao\KTKKNITU\KTKAdmin\KTKAdmin\bin\Release\net7.0-ios\iossimulator-x64\System.Security.Permissions.dll
 C:\Users\ilyao\KTKKNITU\KTKAdmin\KTKAdmin\bin\Release\net7.0-ios\iossimulator-x64\System.Windows.Extensions.dll
-C:\Users\ilyao\KTKKNITU\KTKAdmin\KTKAdmin\obj\Release\net7.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\ilyao\KTKKNITU\KTKAdmin\KTKAdmin\obj\Release\net7.0-ios\iossimulator-x64\Interop.Microsoft.Office.Interop.Excel.dll
 C:\Users\ilyao\KTKKNITU\KTKAdmin\KTKAdmin\obj\Release\net7.0-ios\iossimulator-x64\KTKAdmin.csproj.ResolveComReference.cache
