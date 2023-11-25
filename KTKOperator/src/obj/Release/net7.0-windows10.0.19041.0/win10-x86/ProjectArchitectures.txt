@@ -1,1 +1,0 @@
-C:\Users\ilyao\KTKKNITU\KTKOperator\src\OperatorApp_Client.csproj;x86

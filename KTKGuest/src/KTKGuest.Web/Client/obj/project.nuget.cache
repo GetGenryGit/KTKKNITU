@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OPk3qUH2gOe5lYF0CfQDNSu/JyxUVZw3bZDL36MKTj8CmEXpgz0iXe9CiIX0Zi8qqH+Cf+kTqINu+yHMPSmtbw==",
+  "dgSpecHash": "wh8UHn4fY+t5KuZui2Nyz/EocWrjx0jN2oYHA5wi8LK5+fYc1ohxJZZmXokwQgpxesw4ZHcQ1t6FObobqeVXrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ilyao\\KTKKNITU\\KTKGuest\\src\\KTKGuest.Web\\Client\\KTKGuest.Web.Client.csproj",
   "expectedPackageFiles": [
@@ -30,10 +30,13 @@
     "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.jsinterop\\7.0.10\\microsoft.jsinterop.7.0.10.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.10\\microsoft.jsinterop.webassembly.7.0.10.nupkg.sha512",
+    "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.0\\microsoft.net.sdk.webassembly.pack.8.0.0.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.10\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.10.nupkg.sha512"
+    "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.14\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
